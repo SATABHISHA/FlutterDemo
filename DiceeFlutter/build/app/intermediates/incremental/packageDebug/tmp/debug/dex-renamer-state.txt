@@ -1,0 +1,7 @@
+#Thu Jun 09 18:50:44 IST 2022
+base.1=/Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/build/app/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
+path.1=classes.dex
+base.0=/Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/build/app/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
