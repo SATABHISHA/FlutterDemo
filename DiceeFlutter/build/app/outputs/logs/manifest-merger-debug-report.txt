@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:15:5-44:19
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:15:5-44:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.core:core:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/b8653113bb402d69217b623468746a00/core-1.6.0/AndroidManifest.xml:24:5-89
@@ -10,17 +10,17 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sata
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/b8653113bb402d69217b623468746a00/core-1.6.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:17:9-30
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:17:9-30
 	android:icon
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:18:9-43
 	android:name
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:16:9-42
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:16:9-42
 manifest
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/0362ff4d8672321347a402c32368f192/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/6eea7f0d015de905190c2a3cf481c73c/window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/4932f7e67b26f042b51fa62f1aa4816d/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -38,31 +38,31 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/satabhisharoy/.gradle
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/4af3517d3f5edf423ad48b2331050642/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/64ed055c454b36433d45a77285ee24d6/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/b4fde0173da6059eee8d4eb8a9f63942/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
 	package
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:2:5-34
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:2:5-34
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:1-45:12
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:8:5-66
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:8:5-66
 	android:name
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:8:22-64
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:8:22-64
 uses-sdk
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/0362ff4d8672321347a402c32368f192/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/0362ff4d8672321347a402c32368f192/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/6eea7f0d015de905190c2a3cf481c73c/window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
@@ -97,52 +97,52 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/satabhisharoy/
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/64ed055c454b36433d45a77285ee24d6/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/b4fde0173da6059eee8d4eb8a9f63942/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/b4fde0173da6059eee8d4eb8a9f63942/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml
 activity#co.appbrewery.dicee.MainActivity
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:19:9-38:20
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:19:9-38:20
 	android:launchMode
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:21:13-43
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:21:13-43
 	android:hardwareAccelerated
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:24:13-47
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:24:13-47
 	android:windowSoftInputMode
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:25:13-55
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:25:13-55
 	android:configChanges
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:23:13-137
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:23:13-137
 	android:theme
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:22:13-47
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:22:13-47
 	android:name
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:20:13-41
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:20:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:30:13-33:19
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:30:13-33:19
 	android:resource
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:32:17-54
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:32:17-54
 	android:name
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:31:17-72
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:31:17-72
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:34:13-37:29
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:34:13-37:29
 action#android.intent.action.MAIN
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:35:17-68
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:35:17-68
 	android:name
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:35:25-66
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:36:17-76
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:36:17-76
 	android:name
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:36:27-74
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:36:27-74
 meta-data#flutterEmbedding
-ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:41:9-43:33
+ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:41:9-43:33
 	android:value
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:43:13-30
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:43:13-30
 	android:name
-		ADDED from /Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter/android/app/src/main/AndroidManifest.xml:42:13-44
+		ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter/android/app/src/main/AndroidManifest.xml:42:13-44
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 	android:required
