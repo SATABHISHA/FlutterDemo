@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -15,21 +16,37 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
-  var leftDiceNumber = 5;
+
+class DicePage extends StatefulWidget {
+  const DicePage({Key? key}) : super(key: key);
+
+  @override
+  State<DicePage> createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  var leftDiceNumber = 1, rightDiceNumber = 1;
+
+  void changeDiceFace(){
+    setState(() {
+      // leftDiceNumber = 6;
+      leftDiceNumber = Random().nextInt(6)+1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Row(
         children: [
           Expanded(
-             flex: 1,
-              child: FlatButton(
-                onPressed: () {
-                  print('Left button pressed');
-                },
-                child: Image.asset('images/dice$leftDiceNumber.png'),
-              ),
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+                changeDiceFace();
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
+            ),
           ),
           Expanded(
             flex: 1,
@@ -38,10 +55,14 @@ class DicePage extends StatelessWidget {
               child: FlatButton(
 
                 onPressed: () {
+                  /*setState((){
+                    rightDiceNumber = Random().nextInt(6) + 1;
                   print('Right button pressed');
+                  });*/
+                  changeDiceFace();
                 },
                 child: Image(
-                  image: AssetImage('images/dice1.png'),
+                  image: AssetImage('images/dice$rightDiceNumber.png'),
                 ),
               ),
             ),
@@ -51,3 +72,4 @@ class DicePage extends StatelessWidget {
     );
   }
 }
+
