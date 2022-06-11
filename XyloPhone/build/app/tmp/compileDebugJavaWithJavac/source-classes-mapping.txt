@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+co/appbrewery/xylophone/BuildConfig.java
+ co.appbrewery.xylophone.BuildConfig
+co/appbrewery/xylophone/MainActivity.java
+ co.appbrewery.xylophone.MainActivity

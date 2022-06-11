@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/Volumes/SatabhishaSSD/SSDUser/SSDLibrary/flutter
-FLUTTER_APPLICATION_PATH=/Users/satabhisharoy/Downloads/FlutterDemo/dicee-flutter
+FLUTTER_APPLICATION_PATH=/Users/satabhisharoy/Downloads/git/FlutterDemo/DiceeFlutter
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
