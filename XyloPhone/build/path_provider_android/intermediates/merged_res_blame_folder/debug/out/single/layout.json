@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_res/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_res/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_res/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_res/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_res/debug/layout/custom_dialog.xml",
+        "source": "/Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_res/debug/layout/notification_action.xml",
+        "source": "/Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout/notification_action.xml"
+    }
+]

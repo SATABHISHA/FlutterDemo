@@ -4,12 +4,15 @@ ADDED from /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/android/app/
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/android/app/src/main/AndroidManifest.xml:1:1-39:12
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-3/a96c50cf7b29ca354cf7e80d1718ac87/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [:audioplayers] /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/audioplayers/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-3/d3a2dae4732b253fc3af5660cabaa4f5/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/41a83d0cf61e3d2ab42ea706b65148ab/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/bb9a53f8c4dc071c681fa071739dc70b/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-3/a96c50cf7b29ca354cf7e80d1718ac87/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/8739ef9f080f0ee06c65833001c9e975/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/9e43550e678ca1123a99dd5e1b82ae60/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/6054efa5cf8c2aa2f721b461fc2bb3c2/transformed/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/bb9a53f8c4dc071c681fa071739dc70b/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.customview:customview:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/d750a4640ecd46134a88514ecad02d3f/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/satabhisharoy/.gradle/caches/transforms-3/b0f0415adc5c28937a118b56a214efc7/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
@@ -92,18 +95,24 @@ uses-sdk
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/android/app/src/main/AndroidManifest.xml
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-3/a96c50cf7b29ca354cf7e80d1718ac87/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-3/a96c50cf7b29ca354cf7e80d1718ac87/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [:audioplayers] /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/audioplayers/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-44
+MERGED from [:audioplayers] /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/audioplayers/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-44
+MERGED from [:path_provider_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/XyloPhone/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-3/d3a2dae4732b253fc3af5660cabaa4f5/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-3/d3a2dae4732b253fc3af5660cabaa4f5/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/41a83d0cf61e3d2ab42ea706b65148ab/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/41a83d0cf61e3d2ab42ea706b65148ab/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/bb9a53f8c4dc071c681fa071739dc70b/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/bb9a53f8c4dc071c681fa071739dc70b/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-3/a96c50cf7b29ca354cf7e80d1718ac87/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/satabhisharoy/.gradle/caches/transforms-3/a96c50cf7b29ca354cf7e80d1718ac87/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/8739ef9f080f0ee06c65833001c9e975/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/8739ef9f080f0ee06c65833001c9e975/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/9e43550e678ca1123a99dd5e1b82ae60/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/9e43550e678ca1123a99dd5e1b82ae60/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/6054efa5cf8c2aa2f721b461fc2bb3c2/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/6054efa5cf8c2aa2f721b461fc2bb3c2/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/bb9a53f8c4dc071c681fa071739dc70b/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-3/bb9a53f8c4dc071c681fa071739dc70b/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/d750a4640ecd46134a88514ecad02d3f/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /Users/satabhisharoy/.gradle/caches/transforms-3/d750a4640ecd46134a88514ecad02d3f/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
