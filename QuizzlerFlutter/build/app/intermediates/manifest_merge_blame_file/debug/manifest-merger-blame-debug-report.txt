@@ -6,9 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml
+8-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml
+9-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml
 10
 11    <!--
 12         The INTERNET permission is required for development. Specifically,
@@ -16,8 +16,8 @@
 14         to allow setting breakpoints, to provide hot reload, etc.
 15    -->
 16    <uses-permission android:name="android.permission.INTERNET" />
-16-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:8:5-66
-16-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:8:22-64
+16-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:8:5-66
+16-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:8:22-64
 17    <!--
 18     io.flutter.app.FlutterApplication is an android.app.Application that
 19         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -27,30 +27,30 @@
 23    -->
 24    <application
 25        android:name="android.app.Application"
-25-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:16:9-42
+25-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:16:9-42
 26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 26-->[androidx.core:core:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/b8653113bb402d69217b623468746a00/core-1.6.0/AndroidManifest.xml:24:18-86
 27        android:debuggable="true"
 28        android:icon="@mipmap/ic_launcher"
-28-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:18:9-43
+28-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:18:9-43
 29        android:label="quizzler" >
-29-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:17:9-33
+29-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:17:9-33
 30        <activity
-30-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:19:9-38:20
+30-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:19:9-38:20
 31            android:name="co.appbrewery.quizzler.MainActivity"
-31-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:20:13-41
+31-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:20:13-41
 32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
-32-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:24:13-137
+32-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:24:13-137
 33            android:exported="true"
-33-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:23:13-36
+33-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:23:13-36
 34            android:hardwareAccelerated="true"
-34-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:25:13-47
+34-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:25:13-47
 35            android:launchMode="singleTop"
-35-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:21:13-43
+35-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:21:13-43
 36            android:theme="@style/LaunchTheme"
-36-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:22:13-47
+36-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:22:13-47
 37            android:windowSoftInputMode="adjustResize" >
-37-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:26:13-55
+37-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:26:13-55
 38
 39            <!--
 40                 This keeps the window background of the activity showing
@@ -59,30 +59,30 @@
 43                 defined in @style/LaunchTheme).
 44            -->
 45            <meta-data
-45-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:31:13-33:40
+45-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:31:13-33:40
 46                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
-46-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:32:17-82
+46-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:32:17-82
 47                android:value="true" />
-47-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:33:17-37
+47-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:33:17-37
 48
 49            <intent-filter>
-49-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:34:13-37:29
+49-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:34:13-37:29
 50                <action android:name="android.intent.action.MAIN" />
-50-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:35:17-68
-50-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:35:25-66
+50-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:35:17-68
+50-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:35:25-66
 51
 52                <category android:name="android.intent.category.LAUNCHER" />
-52-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:36:17-76
-52-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:36:27-74
+52-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:36:17-76
+52-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:36:27-74
 53            </intent-filter>
 54        </activity>
 55
 56        <meta-data
-56-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:40:9-42:33
+56-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:40:9-42:33
 57            android:name="flutterEmbedding"
-57-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:41:13-44
+57-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:41:13-44
 58            android:value="2" />
-58-->/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/AndroidManifest.xml:42:13-30
+58-->/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/AndroidManifest.xml:42:13-30
 59
 60        <uses-library
 60-->[androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40

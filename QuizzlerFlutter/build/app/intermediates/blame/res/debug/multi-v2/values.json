@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/res/values/values.xml",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/Users/satabhisharoy/Downloads/git/FlutterDemo/quizzler-flutter/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/satabhisharoy/Downloads/git/FlutterDemo/QuizzlerFlutter/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
