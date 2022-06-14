@@ -55,6 +55,7 @@ class _InputPageState extends State<InputPage> {
                    setState((){
                      selectedGender = Gender.male;
                    });
+                   // selectedGender = Gender.male;
                  },
                   colour: selectedGender == Gender.male? activeCardColor: inactiveCardColor,
                   cardChild: IconContent(
@@ -62,24 +63,16 @@ class _InputPageState extends State<InputPage> {
                       customText: 'Male'
                   ),
               )),
-              Expanded(child: GestureDetector(
-                onTap: (){
-                  setState(() {
-                    // updateColor(Gender.female);
+              Expanded(child: ReusableCard(
+                // colour: Color(0xFF1DE33),
+                // colour: femaleCardColor,
+                onPress: () {
+                  setState((){
                     selectedGender = Gender.female;
                   });
                 },
-                child: ReusableCard(
-                  // colour: Color(0xFF1DE33),
-                  // colour: femaleCardColor,
-                  onPress: (){
-                    setState((){
-                      selectedGender = Gender.female;
-                    });
-                  },
-                  colour: selectedGender == Gender.female? activeCardColor: inactiveCardColor,
-                  cardChild: IconContent(customIcon: Icon(FontAwesomeIcons.female, size: 80), customText: 'Female'),
-                ),
+                colour: selectedGender == Gender.female? activeCardColor: inactiveCardColor,
+                cardChild: IconContent(customIcon: Icon(FontAwesomeIcons.female, size: 80), customText: 'Female'),
               ))
             ],
 
