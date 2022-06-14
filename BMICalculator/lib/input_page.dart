@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:bmi_calculator/reusable_card.dart';
 
 const bottomContainerHeight = 80.0;
 const inactiveCardColor = Color(0xF111328);
@@ -47,22 +48,19 @@ class _InputPageState extends State<InputPage> {
         children: [
           Expanded(child: Row(
             children: [
-              Expanded(child: GestureDetector(
-                onTap: (){
-                  setState((){
-                    // updateColor(Gender.male);
-                    selectedGender = Gender.male;
-                  });
-                },
-                child: ReusableCard(
-                    // colour: Color(0xFF1DE33),
-                    // colour: maleCardColor,
-                    colour: selectedGender == Gender.male? activeCardColor: inactiveCardColor,
-                    cardChild: IconContent(
-                      customIcon: Icon(FontAwesomeIcons.male, size: 80.0,),
-                        customText: 'Male'
-                    ),
-                ),
+              Expanded(child: ReusableCard(
+                  // colour: Color(0xFF1DE33),
+                  // colour: maleCardColor,
+                 onPress: (){
+                   setState((){
+                     selectedGender = Gender.male;
+                   });
+                 },
+                  colour: selectedGender == Gender.male? activeCardColor: inactiveCardColor,
+                  cardChild: IconContent(
+                    customIcon: Icon(FontAwesomeIcons.male, size: 80.0,),
+                      customText: 'Male'
+                  ),
               )),
               Expanded(child: GestureDetector(
                 onTap: (){
@@ -74,6 +72,11 @@ class _InputPageState extends State<InputPage> {
                 child: ReusableCard(
                   // colour: Color(0xFF1DE33),
                   // colour: femaleCardColor,
+                  onPress: (){
+                    setState((){
+                      selectedGender = Gender.female;
+                    });
+                  },
                   colour: selectedGender == Gender.female? activeCardColor: inactiveCardColor,
                   cardChild: IconContent(customIcon: Icon(FontAwesomeIcons.female, size: 80), customText: 'Female'),
                 ),
@@ -155,25 +158,3 @@ class IconContent extends StatelessWidget {
   }
 }
 
-class ReusableCard extends StatelessWidget {
-  // const ReusableCard({Key? key,}) : super(key: key);
-  final Color colour;
-  final Widget cardChild;
-
-  ReusableCard({required this.colour, required this.cardChild});
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: cardChild,
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        // color: Color(0xFF1D1E33),
-        color: colour,
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-
-    );
-  }
-}
