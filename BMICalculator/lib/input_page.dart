@@ -20,20 +20,14 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(child: ReusableCard(
                   colour: Color(0xFF1DE33),
-                  cardChild: IconContent(),
+                  cardChild: IconContent(
+                    customIcon: Icon(FontAwesomeIcons.male, size: 80.0,),
+                      customText: 'Male'
+                  ),
               )),
               Expanded(child: ReusableCard(
                 colour: Color(0xFF1DE33),
-                cardChild: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(FontAwesomeIcons.female, size: 80.0,),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text('Female',style: TextStyle(fontSize: 18.0, color: Color(0xFF8DBE98)),)
-                  ],
-                ),
+                cardChild: IconContent(customIcon: Icon(FontAwesomeIcons.female, size: 80), customText: 'Female'),
               ))
             ],
 
@@ -85,24 +79,26 @@ class _InputPageState extends State<InputPage> {
 }
 
 class IconContent extends StatelessWidget {
-  const IconContent({
-    Key? key,
-  }) : super(key: key);
+  // const IconContent({Key? key,}) : super(key: key);
+  final Icon customIcon;
+  final String customText;
+  IconContent({required this.customIcon, required this.customText});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(
+        customIcon,
+        /*Icon(
           FontAwesomeIcons.mars,
           size: 80.0,
-        ),
+        ),*/
         SizedBox(
           height: 20,
         ),
         Text(
-          'Male',
+          customText,
           style: TextStyle(fontSize: 18.0, color: Color(0xFF8DBE98)),
         )
       ],
