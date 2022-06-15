@@ -21,6 +21,7 @@ class _InputPageState extends State<InputPage> {
   Gender selectedGender = Gender.NA;
   int height = 180;
   int weight = 80;
+  int age = 20;
   /*Color maleCardColor = inactiveCardColor;
   Color femaleCardColor = inactiveCardColor;*/
 
@@ -175,14 +176,41 @@ class _InputPageState extends State<InputPage> {
                   ],
                 ),
               )),
-              Expanded(child: Container(
-                margin: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  color: Color(0xFF1D1E33),
-                  borderRadius: BorderRadius.circular(10.0),
+              Expanded(child: ReusableCard(
+                onPress: (){
+
+                },
+                colour: kActiveCardColor,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Age',style: kLabelTextStyle,),
+                    Text(
+                      age.toString(),
+                      style: kNumberTextStyle,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RoundIconButton(icon: FontAwesomeIcons.add,
+                          onPressed: (){
+                            setState((){
+                               age++;
+                            });
+
+                          },),
+                        SizedBox(width: 10,),
+                        RoundIconButton(icon: FontAwesomeIcons.minus,
+                          onPressed: (){
+                            setState((){
+                              age--;
+                            });
+
+                          },),
+                      ],
+                    ),
+                  ],
                 ),
-                height: 200.0,
-                width: 170.0,
               ))
             ],
           )),
