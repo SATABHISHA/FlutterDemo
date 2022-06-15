@@ -17,6 +17,7 @@ enum Gender{
 }
 class _InputPageState extends State<InputPage> {
   Gender selectedGender = Gender.NA;
+  int height = 180;
   /*Color maleCardColor = inactiveCardColor;
   Color femaleCardColor = inactiveCardColor;*/
 
@@ -45,6 +46,7 @@ class _InputPageState extends State<InputPage> {
         title: Center(child: Text('BMI CALCULATOR')),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(child: Row(
             children: [
@@ -85,9 +87,37 @@ class _InputPageState extends State<InputPage> {
                 },
                 colour: kActiveCardColor,
                 cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Height',
                     style: kLabelTextStyle,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
+                      children: [
+                        Text(
+                          height.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Text(
+                          'cm',
+                          style: kLabelTextStyle,
+                        )
+                      ],
+                    ),
+                    Slider(
+                       value: height.toDouble(),
+                        min: 120.0,
+                        max: 220,
+                        activeColor: Color(0xFFEB1555),
+                        inactiveColor: Color(0xFF8D8E98),
+                        onChanged: (double newValue){
+                         setState((){
+                           height = newValue.round();
+                         });
+
+    },),
                   ],
                 ),
               ),)
