@@ -42,6 +42,7 @@ class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: Center(child: Text('BMI CALCULATOR')),
       ),
