@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator/reusable_card.dart';
@@ -18,6 +20,7 @@ enum Gender{
 class _InputPageState extends State<InputPage> {
   Gender selectedGender = Gender.NA;
   int height = 180;
+  int weight = 80;
   /*Color maleCardColor = inactiveCardColor;
   Color femaleCardColor = inactiveCardColor;*/
 
@@ -137,14 +140,40 @@ class _InputPageState extends State<InputPage> {
           )),
           Expanded(child: Row(
             children: [
-              Expanded(child: Container(
-                margin: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  color: Color(0xFF1D1E33),
-                  borderRadius: BorderRadius.circular(10.0),
+              Expanded(child: ReusableCard(
+                onPress: (){
+
+                },
+                colour: kActiveCardColor,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      weight.toString(),
+                      style: kNumberTextStyle,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RoundIconButton(icon: FontAwesomeIcons.add,
+                        onPressed: (){
+                          setState((){
+                            weight++;
+                          });
+
+                        },),
+                        SizedBox(width: 10,),
+                        RoundIconButton(icon: FontAwesomeIcons.minus,
+                        onPressed: (){
+                          setState((){
+                            weight--;
+                          });
+
+                        },),
+                      ],
+                    ),
+                  ],
                 ),
-                height: 200.0,
-                width: 170.0,
               )),
               Expanded(child: Container(
                 margin: EdgeInsets.all(15.0),
@@ -158,7 +187,7 @@ class _InputPageState extends State<InputPage> {
             ],
           )),
           Container(
-            color: Color(0xFFEB1555),
+            color: kBottomContainerColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
             height: kBottomContainerHeight,
@@ -169,6 +198,30 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
+
+class RoundIconButton extends StatelessWidget {
+  // const RoundIconButton({Key? key}) : super(key: key);
+  RoundIconButton({required this.icon, required this.onPressed});
+  final IconData icon;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      elevation: 0.0,
+      child: Icon(icon),
+      onPressed: onPressed,
+       constraints: BoxConstraints.tightFor(
+          width: 56.0,
+          height: 56.0,
+        ),
+      // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+      shape: CircleBorder(),
+      fillColor: Color(0xFF4C4F5E),
+    );
+  }
+}
+
 
 
 
