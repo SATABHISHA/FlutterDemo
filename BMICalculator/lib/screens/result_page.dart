@@ -3,10 +3,14 @@ import '../constants.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'input_page.dart';
 import '../components/bottom_button.dart';
+import 'package:bmi_calculator/calculator_brain.dart';
 
 class ResultPage extends StatelessWidget {
   // const ResultPage({Key? key}) : super(key: key);
-
+  ResultPage({required this.interpretation, required this.bmiResult, required this.resultText});
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,14 +39,9 @@ class ResultPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                        'Normal',
-                    style: kResultTextStyle,),
-                    Text(
-                        '18.3',
-                      style: kBMITextStyle,
-                    ),
-                    Text('Your BMI result', style: kBodyTextStyle, textAlign: TextAlign.center,)
+                    Text(resultText.toUpperCase(), style: kResultTextStyle,),
+                    Text(bmiResult, style: kBMITextStyle,),
+                    Text(interpretation, style: kBodyTextStyle, textAlign: TextAlign.center,)
                   ],
                 ),
               )),
