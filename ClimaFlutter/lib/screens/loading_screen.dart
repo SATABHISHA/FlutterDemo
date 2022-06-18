@@ -1,9 +1,9 @@
 import 'package:clima/services/location.dart';
+import 'package:clima/services/networking.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'location_screen.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -12,10 +12,14 @@ class LoadingScreen extends StatefulWidget {
 
 
 class _LoadingScreenState extends State<LoadingScreen> {
+  late double latitude;
+  late double longitude;
+
   @override
   void initState() {
     super.initState();
-    // getLocation();
+    // getLocationData();
+    checkLocationPermissionAndFetchLocation();
   }
 
 
@@ -23,35 +27,51 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void deactivate() {
 
   }
-void getLocation() async{
+void getLocationData() async{
     Location location = Location();
     await location.getCurrentLocation();
+
     print(location.latitude);
     print(location.longitude);
+    latitude = location.latitude;
+    longitude = location.longitude;
 
+    NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey');
+    var weatherData = await networkHelper.getData();
 }
 
-void getData() async{
-    http.Response response = await http.get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=4e9ab4284c157b02b2e4ec253edde350'));
-    print(response.body);
-
-    if (response.statusCode == 200){
-      String data = response.body;
-      print(data);
-      var longitude = jsonDecode(data)['coord']['lon'];
-      print(longitude);
-
-      var decodedData = jsonDecode(data);
-      // var weatherDescription = jsonDecode(data)['weather'][0]['description'];
-      var weatherDescription = decodedData['weather'][0]['description'];
-    }else{
-      print(response.statusCode);
+  Future<void> checkLocationPermissionAndFetchLocation() async{
+    bool serviceEnabled;
+    LocationPermission permission;
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    permission = await Geolocator.checkPermission();
+    if (!serviceEnabled) {
+      // Location services are not enabled don't continue
+      // accessing the position and request users of the
+      // App to enable the location services.
+      return Future.error('Location services are disabled.');
     }
-}
-
+     if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        // Permissions are denied, next time you could try
+        // requesting permissions again (this is also where
+        // Android's shouldShowRequestPermissionRationale
+        // returned true. According to Android guidelines
+        // your App should show an explanatory UI now.
+        return Future.error('Location permissions are denied');
+        // return false;
+      } if (permission == LocationPermission.deniedForever) {
+        // Permissions are denied forever, handle appropriately.
+        return Future.error('Location permissions are permanently denied, we cannot request permissions.');
+        // return false;
+      }
+    }
+    getLocationData();
+  }
   @override
   Widget build(BuildContext context) {
-    getData();
+    // getData();
     return Scaffold(
       /*body: Center(
         child: RaisedButton(

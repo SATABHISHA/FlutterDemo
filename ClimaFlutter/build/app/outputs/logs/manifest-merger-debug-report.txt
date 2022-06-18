@@ -29,7 +29,6 @@ INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/androi
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/android/app/src/main/AndroidManifest.xml:1:1-40:12
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/android/app/src/main/AndroidManifest.xml:1:1-40:12
 MERGED from /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/android/app/src/main/AndroidManifest.xml:1:1-40:12
-MERGED from [:permission_handler_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/build/permission_handler_android/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:geolocator_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/build/geolocator_android/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/8cf828cdde8a44406351ac4fb6b4eab1/play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/503246db64dcbb120c121745b36c75fd/play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
@@ -88,8 +87,6 @@ uses-sdk
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/android/app/src/main/AndroidManifest.xml
-MERGED from [:permission_handler_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/build/permission_handler_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/build/permission_handler_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:geolocator_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/build/geolocator_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:geolocator_android] /Users/satabhisharoy/Downloads/git/FlutterDemo/ClimaFlutter/build/geolocator_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/8cf828cdde8a44406351ac4fb6b4eab1/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
