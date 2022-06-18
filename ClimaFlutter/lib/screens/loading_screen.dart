@@ -3,6 +3,7 @@ import 'package:clima/services/networking.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'location_screen.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 
 class LoadingScreen extends StatefulWidget {
@@ -38,6 +39,10 @@ void getLocationData() async{
 
     NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey');
     var weatherData = await networkHelper.getData();
+
+    Navigator.push(context, MaterialPageRoute(builder: (context){
+      return LocationScreen(locationWeather: weatherData,);
+    }));
 }
 
   Future<void> checkLocationPermissionAndFetchLocation() async{
@@ -73,16 +78,12 @@ void getLocationData() async{
   Widget build(BuildContext context) {
     // getData();
     return Scaffold(
-      /*body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            //Get the current location
-
-            // getLocation();
-          },
-          child: Text('Get Location'),
+      body: Center(
+        child: SpinKitDoubleBounce(
+          color: Colors.white,
+          size: 100.0,
         ),
-      ),*/
+      ),
     );
   }
 
