@@ -34,10 +34,10 @@ void getLocationData() async{
 
     print(location.latitude);
     print(location.longitude);
-    latitude = location.latitude;
-    longitude = location.longitude;
+    /*latitude = location.latitude;
+    longitude = location.longitude;*/  //---no more req
 
-    NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric');
+    NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=$apiKey&units=metric');
     var weatherData = await networkHelper.getData();
 
     Navigator.push(context, MaterialPageRoute(builder: (context){
