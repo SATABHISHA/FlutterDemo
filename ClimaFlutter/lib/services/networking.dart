@@ -2,7 +2,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-const apiKey = '4e9ab4284c157b02b2e4ec253edde350';
 class NetworkHelper{
   NetworkHelper(this.url);
   final String url;
