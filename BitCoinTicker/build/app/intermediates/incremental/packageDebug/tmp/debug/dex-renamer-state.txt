@@ -1,4 +1,4 @@
-#Sun Jun 19 19:21:01 IST 2022
+#Sun Jun 19 20:11:25 IST 2022
 base.0=/Users/satabhisharoy/Downloads/git/FlutterDemo/BitCoinTicker/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
