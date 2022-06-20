@@ -1,4 +1,4 @@
-#Mon Jun 20 14:24:00 IST 2022
+#Mon Jun 20 16:41:59 IST 2022
 base.1=/Users/debashispal/Downloads/git/FlutterDemo/FlashChatFlutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes2.dex
 path.1=classes2.dex
 base.0=/Users/debashispal/Downloads/git/FlutterDemo/FlashChatFlutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
