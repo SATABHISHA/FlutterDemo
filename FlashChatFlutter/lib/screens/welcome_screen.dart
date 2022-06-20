@@ -15,19 +15,33 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
 
 
   @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
     super.initState();
 
     controller = AnimationController(vsync: this, duration: Duration(seconds: 1));
-    animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
+    // animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
+    animation = ColorTween(begin: Colors.red, end: Colors.blue).animate(controller);
     controller.forward();
 
+    // controller.reverse(from: 1.0);
     animation.addStatusListener((status) {
       print(status);
+      /*if (status == AnimationStatus.completed){
+        controller.reverse(from: 1.0);
+      }else if (status == AnimationStatus.dismissed){
+        controller.forward();
+      }*/
     });
     controller.addListener(() {
-      setState(() {});
-
+      setState(() {
+      });
+      print(controller.value);
     });
   }
 
@@ -35,7 +49,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.white,
-      backgroundColor: Colors.red.withOpacity(controller.value),
+      // backgroundColor: Colors.red.withOpacity(controller.value),
+      backgroundColor: animation.value,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -48,12 +63,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    // height: 60.0,
-                    height: animation.value*100,
+                    height: 60.0,
+                    // height: animation.value*100,
                   ),
                 ),
                 Text(
-                  '${controller.value.toInt()}%',
+                  // '${controller.value.toInt()}%',
+                  'Flash Chat',
                   style: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
