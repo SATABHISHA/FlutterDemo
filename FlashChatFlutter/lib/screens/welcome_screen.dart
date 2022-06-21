@@ -1,7 +1,10 @@
 import 'package:flash_chat/screens/registration_screen.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'dart:io' show Platform;
+import 'package:flutter/foundation.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
@@ -45,6 +48,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
       print(controller.value);
     });
   }
+
+  double checkWidthPlatform(){
+
+      /*if (kIsWeb){
+        return 50.0;
+      }else{
+        return 200.0;
+      }*/
+    if (Platform.isAndroid) {
+      return 200.0;
+    }
+      else{
+        return 50.0;
+       }
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +130,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     //Go to registration screen.
                     Navigator.pushNamed(context, RegistrationScreen.id);
                   },
-                  minWidth: 200.0,
+                  minWidth: checkWidthPlatform(),
                   height: 42.0,
                   child: Text(
                     'Register',
