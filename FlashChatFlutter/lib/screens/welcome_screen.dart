@@ -86,13 +86,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     // height: animation.value*100,
                   ),
                 ),
-                Text(
+                TypewriterAnimatedTextKit(
                   // '${controller.value.toInt()}%',
-                  'Flash Chat',
-                  style: TextStyle(
+                  text: ['Flash Chat'],
+                  textStyle: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
-                    color: Colors.black
                   ),
                 ),
               ],
