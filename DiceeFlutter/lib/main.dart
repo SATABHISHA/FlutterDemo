@@ -45,7 +45,7 @@ class _DicePageState extends State<DicePage> {
               onPressed: () {
                 changeDiceFace();
               },
-              child: Image.asset('images/dice$leftDiceNumber.png'),
+              chil d: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
