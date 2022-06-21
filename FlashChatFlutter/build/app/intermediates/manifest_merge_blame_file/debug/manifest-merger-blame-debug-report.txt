@@ -12,8 +12,8 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/satabhisharoy/Downloads/git/FlutterDemo/FlashChatFlutter/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/Users/satabhisharoy/Downloads/git/FlutterDemo/FlashChatFlutter/android/app/src/debug/AndroidManifest.xml:6:22-64
+14-->/Users/debashispal/Downloads/git/FlutterDemo/FlashChatFlutter/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/debashispal/Downloads/git/FlutterDemo/FlashChatFlutter/android/app/src/debug/AndroidManifest.xml:6:22-64
 15    <!--
 16     io.flutter.app.FlutterApplication is an android.app.Application that
 17         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -24,7 +24,7 @@
 22    <application
 23        android:name="android.app.Application"
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.6.0] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/b8653113bb402d69217b623468746a00/core-1.6.0/AndroidManifest.xml:24:18-86
+24-->[androidx.core:core:1.6.0] /Users/debashispal/.gradle/caches/transforms-2/files-2.1/b8653113bb402d69217b623468746a00/core-1.6.0/AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
 26        android:icon="@mipmap/ic_launcher"
 27        android:label="flash_chat" >
@@ -58,17 +58,17 @@
 55            android:value="2" />
 56
 57        <uses-library
-57-->[androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+57-->[androidx.window:window:1.0.0-beta04] /Users/debashispal/.gradle/caches/transforms-2/files-2.1/80004dd7909b52004d1e978dbcdab1b8/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 58            android:name="androidx.window.extensions"
-58-->[androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+58-->[androidx.window:window:1.0.0-beta04] /Users/debashispal/.gradle/caches/transforms-2/files-2.1/80004dd7909b52004d1e978dbcdab1b8/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
 59            android:required="false" />
-59-->[androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+59-->[androidx.window:window:1.0.0-beta04] /Users/debashispal/.gradle/caches/transforms-2/files-2.1/80004dd7909b52004d1e978dbcdab1b8/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
 60        <uses-library
-60-->[androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+60-->[androidx.window:window:1.0.0-beta04] /Users/debashispal/.gradle/caches/transforms-2/files-2.1/80004dd7909b52004d1e978dbcdab1b8/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
 61            android:name="androidx.window.sidecar"
-61-->[androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+61-->[androidx.window:window:1.0.0-beta04] /Users/debashispal/.gradle/caches/transforms-2/files-2.1/80004dd7909b52004d1e978dbcdab1b8/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 62            android:required="false" />
-62-->[androidx.window:window:1.0.0-beta04] /Users/satabhisharoy/.gradle/caches/transforms-2/files-2.1/f3c9f091a21bda40bc2445b5ec23472a/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+62-->[androidx.window:window:1.0.0-beta04] /Users/debashispal/.gradle/caches/transforms-2/files-2.1/80004dd7909b52004d1e978dbcdab1b8/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
 63    </application>
 64
 65</manifest>

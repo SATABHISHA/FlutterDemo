@@ -1,6 +1,7 @@
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
@@ -24,7 +25,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   void initState() {
     super.initState();
 
-    controller = AnimationController(vsync: this, duration: Duration(seconds: 1));
+    controller = AnimationController(vsync: this, duration: Duration(seconds: 10));
     // animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
     animation = ColorTween(begin: Colors.red, end: Colors.blue).animate(controller);
     controller.forward();
