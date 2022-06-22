@@ -56,6 +56,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "firebase_core",
+      "rootUri": "file:///Users/debashispal/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///Users/debashispal/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-4.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///Users/debashispal/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.6.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/debashispal/Developer/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -66,6 +84,18 @@
       "rootUri": "file:///Users/debashispal/Developer/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/debashispal/Developer/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///Users/debashispal/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "matcher",
@@ -88,6 +118,12 @@
     {
       "name": "path",
       "rootUri": "file:///Users/debashispal/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/debashispal/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -146,7 +182,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2022-06-22T06:50:13.631057Z",
+  "generated": "2022-06-22T11:38:43.878293Z",
   "generator": "pub",
   "generatorVersion": "2.17.1"
 }
