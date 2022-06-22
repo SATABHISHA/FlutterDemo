@@ -34,6 +34,28 @@ public final class R {
      */
     public static final int alwaysExpand=0x7f010003;
     /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>icon_only</td><td>2</td><td></td></tr>
+     * <tr><td>standard</td><td>0</td><td></td></tr>
+     * <tr><td>wide</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int buttonSize=0x7f010004;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int circleCrop=0x7f010005;
+    /**
      * If there is an existing split with the same primary container, indicates whether the
      * existing secondary container on top and all activities in it should be destroyed when a new
      * split is created using this rule. Otherwise the new secondary will appear on top. Defaults
@@ -41,21 +63,45 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int clearTop=0x7f010004;
+    public static final int clearTop=0x7f010006;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>2</td><td></td></tr>
+     * <tr><td>dark</td><td>0</td><td></td></tr>
+     * <tr><td>light</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int colorScheme=0x7f010007;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int coordinatorLayoutStyle=0x7f010008;
     /**
      * When all activities are finished in the secondary container, the activity in the
      * primary container that created the split should also be finished. Defaults to "false".
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int finishPrimaryWithSecondary=0x7f010005;
+    public static final int finishPrimaryWithSecondary=0x7f010009;
     /**
      * When all activities are finished in the primary container, the activities in the
      * secondary container in the split should also be finished. Defaults to "true".
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int finishSecondaryWithPrimary=0x7f010006;
+    public static final int finishSecondaryWithPrimary=0x7f01000a;
     /**
      * The reference to the font file to be used. This should be a file in the res/font folder
      * and should therefore have an R reference value. E.g. @font/myfont
@@ -64,13 +110,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f010007;
+    public static final int font=0x7f01000b;
     /**
      * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderAuthority=0x7f010008;
+    public static final int fontProviderAuthority=0x7f01000c;
     /**
      * The sets of hashes for the certificates the provider should be signed with. This is
      * used to verify the identity of the provider, and is only required if the provider is not
@@ -82,7 +128,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f010009;
+    public static final int fontProviderCerts=0x7f01000d;
     /**
      * The strategy to be used when fetching font data from a font provider in XML layouts.
      * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
@@ -109,7 +155,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f01000a;
+    public static final int fontProviderFetchStrategy=0x7f01000e;
     /**
      * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
@@ -123,21 +169,21 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f01000b;
+    public static final int fontProviderFetchTimeout=0x7f01000f;
     /**
      * The package for the Font Provider to be used for the request. This is used to verify
      * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f01000c;
+    public static final int fontProviderPackage=0x7f010010;
     /**
      * The query to be sent over to the provider. Refer to your font provider's documentation
      * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f01000d;
+    public static final int fontProviderQuery=0x7f010011;
     /**
      * Provides the system font family name to check before downloading the font. For
      * example if the fontProviderQuery asked for "Sans Serif", it is possible to define
@@ -146,7 +192,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderSystemFontFamily=0x7f01000e;
+    public static final int fontProviderSystemFontFamily=0x7f010012;
     /**
      * The style of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any style information in the font's header tables. If
@@ -161,7 +207,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f01000f;
+    public static final int fontStyle=0x7f010013;
     /**
      * The variation settings to be applied to the font. The string should be in the following
      * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
@@ -170,7 +216,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontVariationSettings=0x7f010010;
+    public static final int fontVariationSettings=0x7f010014;
     /**
      * The weight of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any weight information in the font's header tables. Must
@@ -179,27 +225,148 @@ public final class R {
      * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f010011;
+    public static final int fontWeight=0x7f010015;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int imageAspectRatio=0x7f010016;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>adjust_height</td><td>2</td><td></td></tr>
+     * <tr><td>adjust_width</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int imageAspectRatioAdjust=0x7f010017;
+    /**
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int keylines=0x7f010018;
+    /**
+     * The id of an anchor view that this view should position relative to.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int layout_anchor=0x7f010019;
+    /**
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * </table>
+     */
+    public static final int layout_anchorGravity=0x7f01001a;
+    /**
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int layout_behavior=0x7f01001b;
+    /**
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * </table>
+     */
+    public static final int layout_dodgeInsetEdges=0x7f01001c;
+    /**
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * </table>
+     */
+    public static final int layout_insetEdge=0x7f01001d;
+    /**
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
+     * <p>May be an integer value, such as "<code>100</code>".
+     */
+    public static final int layout_keyline=0x7f01001e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int nestedScrollViewStyle=0x7f010012;
+    public static final int nestedScrollViewStyle=0x7f01001f;
     /**
      * Component name of the placeholder activity in the split. Must be non-empty.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int placeholderActivityName=0x7f010013;
+    public static final int placeholderActivityName=0x7f010020;
     /**
      * Component name of the primary activity in the split. Must be non-empty. Can contain a
      * wildcard at the end or instead of package name and/or class name.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int primaryActivityName=0x7f010014;
+    public static final int primaryActivityName=0x7f010021;
     /**
      * Resource reference to the string array of query patterns for a custom capability.
      * <p>May be a reference to another resource, in the form
@@ -207,27 +374,36 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int queryPatterns=0x7f010015;
+    public static final int queryPatterns=0x7f010022;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int scopeUris=0x7f010023;
     /**
      * Action used for secondary activity launch. May be empty. Must not contain wildcards.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int secondaryActivityAction=0x7f010016;
+    public static final int secondaryActivityAction=0x7f010024;
     /**
      * Component name of the secondary activity in the split. Must be non-empty. Can contain a
      * wildcard at the end or instead of package name and/or class name.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int secondaryActivityName=0x7f010017;
+    public static final int secondaryActivityName=0x7f010025;
     /**
      * Indicates whether a parameter in a capability template can only contain a matched
      * shortcut id and not an arbitrary string.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int shortcutMatchRequired=0x7f010018;
+    public static final int shortcutMatchRequired=0x7f010026;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -240,7 +416,7 @@ public final class R {
      * <tr><td>rtl</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int splitLayoutDirection=0x7f010019;
+    public static final int splitLayoutDirection=0x7f010027;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -248,7 +424,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int splitMinSmallestWidth=0x7f01001a;
+    public static final int splitMinSmallestWidth=0x7f010028;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -256,23 +432,48 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int splitMinWidth=0x7f01001b;
+    public static final int splitMinWidth=0x7f010029;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int splitRatio=0x7f01001c;
+    public static final int splitRatio=0x7f01002a;
+    /**
+     * Drawable to display behind the status bar when the view is set to draw behind it.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int statusBarBackground=0x7f01002b;
     /**
      * The index of the font in the tcc font file. If the font file referenced is not in the
      * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f01001d;
+    public static final int ttcIndex=0x7f01002c;
   }
   public static final class color {
     public static final int androidx_core_ripple_material_light=0x7f020000;
     public static final int androidx_core_secondary_text_default_material_light=0x7f020001;
-    public static final int notification_action_color_filter=0x7f020002;
-    public static final int notification_icon_bg_color=0x7f020003;
+    public static final int common_google_signin_btn_text_dark=0x7f020002;
+    public static final int common_google_signin_btn_text_dark_default=0x7f020003;
+    public static final int common_google_signin_btn_text_dark_disabled=0x7f020004;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f020005;
+    public static final int common_google_signin_btn_text_dark_pressed=0x7f020006;
+    public static final int common_google_signin_btn_text_light=0x7f020007;
+    public static final int common_google_signin_btn_text_light_default=0x7f020008;
+    public static final int common_google_signin_btn_text_light_disabled=0x7f020009;
+    public static final int common_google_signin_btn_text_light_focused=0x7f02000a;
+    public static final int common_google_signin_btn_text_light_pressed=0x7f02000b;
+    public static final int common_google_signin_btn_tint=0x7f02000c;
+    public static final int notification_action_color_filter=0x7f02000d;
+    public static final int notification_icon_bg_color=0x7f02000e;
+    public static final int notification_material_background_media_default_color=0x7f02000f;
+    public static final int primary_text_default_material_dark=0x7f020010;
+    public static final int secondary_text_default_material_dark=0x7f020011;
   }
   public static final class dimen {
     public static final int compat_button_inset_horizontal_material=0x7f030000;
@@ -297,22 +498,47 @@ public final class R {
     public static final int notification_subtext_size=0x7f030013;
     public static final int notification_top_pad=0x7f030014;
     public static final int notification_top_pad_large_text=0x7f030015;
+    public static final int subtitle_corner_radius=0x7f030016;
+    public static final int subtitle_outline_width=0x7f030017;
+    public static final int subtitle_shadow_offset=0x7f030018;
+    public static final int subtitle_shadow_radius=0x7f030019;
   }
   public static final class drawable {
-    public static final int ic_launcher_background=0x7f040000;
-    public static final int launch_background=0x7f040001;
-    public static final int notification_action_background=0x7f040002;
-    public static final int notification_bg=0x7f040003;
-    public static final int notification_bg_low=0x7f040004;
-    public static final int notification_bg_low_normal=0x7f040005;
-    public static final int notification_bg_low_pressed=0x7f040006;
-    public static final int notification_bg_normal=0x7f040007;
-    public static final int notification_bg_normal_pressed=0x7f040008;
-    public static final int notification_icon_background=0x7f040009;
-    public static final int notification_template_icon_bg=0x7f04000a;
-    public static final int notification_template_icon_low_bg=0x7f04000b;
-    public static final int notification_tile_bg=0x7f04000c;
-    public static final int notify_panel_notification_icon_bg=0x7f04000d;
+    public static final int common_full_open_on_phone=0x7f040000;
+    public static final int common_google_signin_btn_icon_dark=0x7f040001;
+    public static final int common_google_signin_btn_icon_dark_focused=0x7f040002;
+    public static final int common_google_signin_btn_icon_dark_normal=0x7f040003;
+    public static final int common_google_signin_btn_icon_dark_normal_background=0x7f040004;
+    public static final int common_google_signin_btn_icon_disabled=0x7f040005;
+    public static final int common_google_signin_btn_icon_light=0x7f040006;
+    public static final int common_google_signin_btn_icon_light_focused=0x7f040007;
+    public static final int common_google_signin_btn_icon_light_normal=0x7f040008;
+    public static final int common_google_signin_btn_icon_light_normal_background=0x7f040009;
+    public static final int common_google_signin_btn_text_dark=0x7f04000a;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f04000b;
+    public static final int common_google_signin_btn_text_dark_normal=0x7f04000c;
+    public static final int common_google_signin_btn_text_dark_normal_background=0x7f04000d;
+    public static final int common_google_signin_btn_text_disabled=0x7f04000e;
+    public static final int common_google_signin_btn_text_light=0x7f04000f;
+    public static final int common_google_signin_btn_text_light_focused=0x7f040010;
+    public static final int common_google_signin_btn_text_light_normal=0x7f040011;
+    public static final int common_google_signin_btn_text_light_normal_background=0x7f040012;
+    public static final int googleg_disabled_color_18=0x7f040013;
+    public static final int googleg_standard_color_18=0x7f040014;
+    public static final int ic_launcher_background=0x7f040015;
+    public static final int launch_background=0x7f040016;
+    public static final int notification_action_background=0x7f040017;
+    public static final int notification_bg=0x7f040018;
+    public static final int notification_bg_low=0x7f040019;
+    public static final int notification_bg_low_normal=0x7f04001a;
+    public static final int notification_bg_low_pressed=0x7f04001b;
+    public static final int notification_bg_normal=0x7f04001c;
+    public static final int notification_bg_normal_pressed=0x7f04001d;
+    public static final int notification_icon_background=0x7f04001e;
+    public static final int notification_template_icon_bg=0x7f04001f;
+    public static final int notification_template_icon_low_bg=0x7f040020;
+    public static final int notification_tile_bg=0x7f040021;
+    public static final int notify_panel_notification_icon_bg=0x7f040022;
   }
   public static final class id {
     public static final int accessibility_action_clickable_span=0x7f050000;
@@ -348,61 +574,101 @@ public final class R {
     public static final int accessibility_custom_action_7=0x7f05001e;
     public static final int accessibility_custom_action_8=0x7f05001f;
     public static final int accessibility_custom_action_9=0x7f050020;
-    public static final int action_container=0x7f050021;
-    public static final int action_divider=0x7f050022;
-    public static final int action_image=0x7f050023;
-    public static final int action_text=0x7f050024;
-    public static final int actions=0x7f050025;
-    public static final int androidx_window_activity_scope=0x7f050026;
-    public static final int async=0x7f050027;
-    public static final int blocking=0x7f050028;
-    public static final int chronometer=0x7f050029;
-    public static final int dialog_button=0x7f05002a;
-    public static final int forever=0x7f05002b;
-    public static final int icon=0x7f05002c;
-    public static final int icon_group=0x7f05002d;
-    public static final int info=0x7f05002e;
-    public static final int italic=0x7f05002f;
-    public static final int line1=0x7f050030;
-    public static final int line3=0x7f050031;
-    public static final int locale=0x7f050032;
-    public static final int ltr=0x7f050033;
-    public static final int normal=0x7f050034;
-    public static final int notification_background=0x7f050035;
-    public static final int notification_main_column=0x7f050036;
-    public static final int notification_main_column_container=0x7f050037;
-    public static final int right_icon=0x7f050038;
-    public static final int right_side=0x7f050039;
-    public static final int rtl=0x7f05003a;
-    public static final int tag_accessibility_actions=0x7f05003b;
-    public static final int tag_accessibility_clickable_spans=0x7f05003c;
-    public static final int tag_accessibility_heading=0x7f05003d;
-    public static final int tag_accessibility_pane_title=0x7f05003e;
-    public static final int tag_on_apply_window_listener=0x7f05003f;
-    public static final int tag_on_receive_content_listener=0x7f050040;
-    public static final int tag_on_receive_content_mime_types=0x7f050041;
-    public static final int tag_screen_reader_focusable=0x7f050042;
-    public static final int tag_state_description=0x7f050043;
-    public static final int tag_transition_group=0x7f050044;
-    public static final int tag_unhandled_key_event_manager=0x7f050045;
-    public static final int tag_unhandled_key_listeners=0x7f050046;
-    public static final int tag_window_insets_animation_callback=0x7f050047;
-    public static final int text=0x7f050048;
-    public static final int text2=0x7f050049;
-    public static final int time=0x7f05004a;
-    public static final int title=0x7f05004b;
+    public static final int action0=0x7f050021;
+    public static final int action_container=0x7f050022;
+    public static final int action_divider=0x7f050023;
+    public static final int action_image=0x7f050024;
+    public static final int action_text=0x7f050025;
+    public static final int actions=0x7f050026;
+    public static final int adjust_height=0x7f050027;
+    public static final int adjust_width=0x7f050028;
+    public static final int all=0x7f050029;
+    public static final int androidx_window_activity_scope=0x7f05002a;
+    public static final int async=0x7f05002b;
+    public static final int auto=0x7f05002c;
+    public static final int blocking=0x7f05002d;
+    public static final int bottom=0x7f05002e;
+    public static final int cancel_action=0x7f05002f;
+    public static final int center=0x7f050030;
+    public static final int center_horizontal=0x7f050031;
+    public static final int center_vertical=0x7f050032;
+    public static final int chronometer=0x7f050033;
+    public static final int clip_horizontal=0x7f050034;
+    public static final int clip_vertical=0x7f050035;
+    public static final int dark=0x7f050036;
+    public static final int dialog_button=0x7f050037;
+    public static final int end=0x7f050038;
+    public static final int end_padder=0x7f050039;
+    public static final int fill=0x7f05003a;
+    public static final int fill_horizontal=0x7f05003b;
+    public static final int fill_vertical=0x7f05003c;
+    public static final int forever=0x7f05003d;
+    public static final int icon=0x7f05003e;
+    public static final int icon_group=0x7f05003f;
+    public static final int icon_only=0x7f050040;
+    public static final int info=0x7f050041;
+    public static final int italic=0x7f050042;
+    public static final int left=0x7f050043;
+    public static final int light=0x7f050044;
+    public static final int line1=0x7f050045;
+    public static final int line3=0x7f050046;
+    public static final int locale=0x7f050047;
+    public static final int ltr=0x7f050048;
+    public static final int media_actions=0x7f050049;
+    public static final int none=0x7f05004a;
+    public static final int normal=0x7f05004b;
+    public static final int notification_background=0x7f05004c;
+    public static final int notification_main_column=0x7f05004d;
+    public static final int notification_main_column_container=0x7f05004e;
+    public static final int right=0x7f05004f;
+    public static final int right_icon=0x7f050050;
+    public static final int right_side=0x7f050051;
+    public static final int rtl=0x7f050052;
+    public static final int standard=0x7f050053;
+    public static final int start=0x7f050054;
+    public static final int status_bar_latest_event_content=0x7f050055;
+    public static final int tag_accessibility_actions=0x7f050056;
+    public static final int tag_accessibility_clickable_spans=0x7f050057;
+    public static final int tag_accessibility_heading=0x7f050058;
+    public static final int tag_accessibility_pane_title=0x7f050059;
+    public static final int tag_on_apply_window_listener=0x7f05005a;
+    public static final int tag_on_receive_content_listener=0x7f05005b;
+    public static final int tag_on_receive_content_mime_types=0x7f05005c;
+    public static final int tag_screen_reader_focusable=0x7f05005d;
+    public static final int tag_state_description=0x7f05005e;
+    public static final int tag_transition_group=0x7f05005f;
+    public static final int tag_unhandled_key_event_manager=0x7f050060;
+    public static final int tag_unhandled_key_listeners=0x7f050061;
+    public static final int tag_window_insets_animation_callback=0x7f050062;
+    public static final int text=0x7f050063;
+    public static final int text2=0x7f050064;
+    public static final int time=0x7f050065;
+    public static final int title=0x7f050066;
+    public static final int top=0x7f050067;
+    public static final int wide=0x7f050068;
   }
   public static final class integer {
-    public static final int status_bar_notification_info_maxnum=0x7f060000;
+    public static final int cancel_button_image_alpha=0x7f060000;
+    public static final int google_play_services_version=0x7f060001;
+    public static final int status_bar_notification_info_maxnum=0x7f060002;
   }
   public static final class layout {
     public static final int custom_dialog=0x7f070000;
     public static final int notification_action=0x7f070001;
     public static final int notification_action_tombstone=0x7f070002;
-    public static final int notification_template_custom_big=0x7f070003;
-    public static final int notification_template_icon_group=0x7f070004;
-    public static final int notification_template_part_chronometer=0x7f070005;
-    public static final int notification_template_part_time=0x7f070006;
+    public static final int notification_media_action=0x7f070003;
+    public static final int notification_media_cancel_action=0x7f070004;
+    public static final int notification_template_big_media=0x7f070005;
+    public static final int notification_template_big_media_custom=0x7f070006;
+    public static final int notification_template_big_media_narrow=0x7f070007;
+    public static final int notification_template_big_media_narrow_custom=0x7f070008;
+    public static final int notification_template_custom_big=0x7f070009;
+    public static final int notification_template_icon_group=0x7f07000a;
+    public static final int notification_template_lines_media=0x7f07000b;
+    public static final int notification_template_media=0x7f07000c;
+    public static final int notification_template_media_custom=0x7f07000d;
+    public static final int notification_template_part_chronometer=0x7f07000e;
+    public static final int notification_template_part_time=0x7f07000f;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f080000;
@@ -410,17 +676,48 @@ public final class R {
     public static final int ic_launcher_round=0x7f080002;
   }
   public static final class string {
-    public static final int status_bar_notification_info_overflow=0x7f090000;
+    public static final int common_google_play_services_enable_button=0x7f090000;
+    public static final int common_google_play_services_enable_text=0x7f090001;
+    public static final int common_google_play_services_enable_title=0x7f090002;
+    public static final int common_google_play_services_install_button=0x7f090003;
+    public static final int common_google_play_services_install_text=0x7f090004;
+    public static final int common_google_play_services_install_title=0x7f090005;
+    public static final int common_google_play_services_notification_channel_name=0x7f090006;
+    public static final int common_google_play_services_notification_ticker=0x7f090007;
+    public static final int common_google_play_services_unknown_issue=0x7f090008;
+    public static final int common_google_play_services_unsupported_text=0x7f090009;
+    public static final int common_google_play_services_update_button=0x7f09000a;
+    public static final int common_google_play_services_update_text=0x7f09000b;
+    public static final int common_google_play_services_update_title=0x7f09000c;
+    public static final int common_google_play_services_updating_text=0x7f09000d;
+    public static final int common_google_play_services_wear_update_text=0x7f09000e;
+    public static final int common_open_on_phone=0x7f09000f;
+    public static final int common_signin_button_text=0x7f090010;
+    public static final int common_signin_button_text_long=0x7f090011;
+    public static final int default_web_client_id=0x7f090012;
+    public static final int gcm_defaultSenderId=0x7f090013;
+    public static final int google_api_key=0x7f090014;
+    public static final int google_app_id=0x7f090015;
+    public static final int google_crash_reporting_api_key=0x7f090016;
+    public static final int google_storage_bucket=0x7f090017;
+    public static final int project_id=0x7f090018;
+    public static final int status_bar_notification_info_overflow=0x7f090019;
   }
   public static final class style {
     public static final int LaunchTheme=0x7f0a0000;
     public static final int TextAppearance_Compat_Notification=0x7f0a0001;
     public static final int TextAppearance_Compat_Notification_Info=0x7f0a0002;
-    public static final int TextAppearance_Compat_Notification_Line2=0x7f0a0003;
-    public static final int TextAppearance_Compat_Notification_Time=0x7f0a0004;
-    public static final int TextAppearance_Compat_Notification_Title=0x7f0a0005;
-    public static final int Widget_Compat_NotificationActionContainer=0x7f0a0006;
-    public static final int Widget_Compat_NotificationActionText=0x7f0a0007;
+    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0a0003;
+    public static final int TextAppearance_Compat_Notification_Line2=0x7f0a0004;
+    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0a0005;
+    public static final int TextAppearance_Compat_Notification_Media=0x7f0a0006;
+    public static final int TextAppearance_Compat_Notification_Time=0x7f0a0007;
+    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0a0008;
+    public static final int TextAppearance_Compat_Notification_Title=0x7f0a0009;
+    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0a000a;
+    public static final int Widget_Compat_NotificationActionContainer=0x7f0a000b;
+    public static final int Widget_Compat_NotificationActionText=0x7f0a000c;
+    public static final int Widget_Support_CoordinatorLayout=0x7f0a000d;
   }
   public static final class styleable {
     /**
@@ -430,8 +727,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActivityFilter_activityAction co.appbrewery.flash_chat:activityAction}</code></td><td>Action used for activity launch.</td></tr>
-     * <tr><td><code>{@link #ActivityFilter_activityName co.appbrewery.flash_chat:activityName}</code></td><td>Component name of the primary activity in the split.</td></tr>
+     * <tr><td><code>{@link #ActivityFilter_activityAction co.sr.flash_chat:activityAction}</code></td><td>Action used for activity launch.</td></tr>
+     * <tr><td><code>{@link #ActivityFilter_activityName co.sr.flash_chat:activityName}</code></td><td>Component name of the primary activity in the split.</td></tr>
      * </table>
      * @see #ActivityFilter_activityAction
      * @see #ActivityFilter_activityName
@@ -447,7 +744,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:activityAction
+     * @attr name co.sr.flash_chat:activityAction
      */
     public static final int ActivityFilter_activityAction=0;
     /**
@@ -459,7 +756,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:activityName
+     * @attr name co.sr.flash_chat:activityName
      */
     public static final int ActivityFilter_activityName=1;
     /**
@@ -469,7 +766,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActivityRule_alwaysExpand co.appbrewery.flash_chat:alwaysExpand}</code></td><td>Whether the activity should always be expanded on launch.</td></tr>
+     * <tr><td><code>{@link #ActivityRule_alwaysExpand co.sr.flash_chat:alwaysExpand}</code></td><td>Whether the activity should always be expanded on launch.</td></tr>
      * </table>
      * @see #ActivityRule_alwaysExpand
      */
@@ -484,7 +781,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name co.appbrewery.flash_chat:alwaysExpand
+     * @attr name co.sr.flash_chat:alwaysExpand
      */
     public static final int ActivityRule_alwaysExpand=0;
     /**
@@ -494,15 +791,15 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Capability_queryPatterns co.appbrewery.flash_chat:queryPatterns}</code></td><td>Resource reference to the string array of query patterns for a custom capability.</td></tr>
-     * <tr><td><code>{@link #Capability_shortcutMatchRequired co.appbrewery.flash_chat:shortcutMatchRequired}</code></td><td>Indicates whether a parameter in a capability template can only contain a matched
+     * <tr><td><code>{@link #Capability_queryPatterns co.sr.flash_chat:queryPatterns}</code></td><td>Resource reference to the string array of query patterns for a custom capability.</td></tr>
+     * <tr><td><code>{@link #Capability_shortcutMatchRequired co.sr.flash_chat:shortcutMatchRequired}</code></td><td>Indicates whether a parameter in a capability template can only contain a matched
      * shortcut id and not an arbitrary string.</td></tr>
      * </table>
      * @see #Capability_queryPatterns
      * @see #Capability_shortcutMatchRequired
      */
     public static final int[] Capability={
-      0x7f010015, 0x7f010018
+      0x7f010022, 0x7f010026
     };
     /**
      * <p>
@@ -514,7 +811,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name co.appbrewery.flash_chat:queryPatterns
+     * @attr name co.sr.flash_chat:queryPatterns
      */
     public static final int Capability_queryPatterns=0;
     /**
@@ -526,7 +823,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name co.appbrewery.flash_chat:shortcutMatchRequired
+     * @attr name co.sr.flash_chat:shortcutMatchRequired
      */
     public static final int Capability_shortcutMatchRequired=1;
     /**
@@ -538,7 +835,7 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha co.appbrewery.flash_chat:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha co.sr.flash_chat:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
      * </table>
      * @see #ColorStateListItem_android_color
      * @see #ColorStateListItem_android_alpha
@@ -575,9 +872,240 @@ public final class R {
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name co.appbrewery.flash_chat:alpha
+     * @attr name co.sr.flash_chat:alpha
      */
     public static final int ColorStateListItem_alpha=2;
+    /**
+     * Attributes that can be used with a CoordinatorLayout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_keylines co.sr.flash_chat:keylines}</code></td><td>A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground co.sr.flash_chat:statusBarBackground}</code></td><td>Drawable to display behind the status bar when the view is set to draw behind it.</td></tr>
+     * </table>
+     * @see #CoordinatorLayout_keylines
+     * @see #CoordinatorLayout_statusBarBackground
+     */
+    public static final int[] CoordinatorLayout={
+      0x7f010018, 0x7f01002b
+    };
+    /**
+     * <p>
+     * @attr description
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name co.sr.flash_chat:keylines
+     */
+    public static final int CoordinatorLayout_keylines=0;
+    /**
+     * <p>
+     * @attr description
+     * Drawable to display behind the status bar when the view is set to draw behind it.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name co.sr.flash_chat:statusBarBackground
+     */
+    public static final int CoordinatorLayout_statusBarBackground=1;
+    /**
+     * Attributes that can be used with a CoordinatorLayout_Layout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor co.sr.flash_chat:layout_anchor}</code></td><td>The id of an anchor view that this view should position relative to.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity co.sr.flash_chat:layout_anchorGravity}</code></td><td>Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior co.sr.flash_chat:layout_behavior}</code></td><td>The class name of a Behavior class defining special runtime behavior
+     * for this child view.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges co.sr.flash_chat:layout_dodgeInsetEdges}</code></td><td>Specifies how this view dodges the inset edges of the CoordinatorLayout.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge co.sr.flash_chat:layout_insetEdge}</code></td><td>Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline co.sr.flash_chat:layout_keyline}</code></td><td>The index of a keyline this view should position relative to.</td></tr>
+     * </table>
+     * @see #CoordinatorLayout_Layout_android_layout_gravity
+     * @see #CoordinatorLayout_Layout_layout_anchor
+     * @see #CoordinatorLayout_Layout_layout_anchorGravity
+     * @see #CoordinatorLayout_Layout_layout_behavior
+     * @see #CoordinatorLayout_Layout_layout_dodgeInsetEdges
+     * @see #CoordinatorLayout_Layout_layout_insetEdge
+     * @see #CoordinatorLayout_Layout_layout_keyline
+     */
+    public static final int[] CoordinatorLayout_Layout={
+      0x010100b3, 0x7f010019, 0x7f01001a, 0x7f01001b, 
+      0x7f01001c, 0x7f01001d, 0x7f01001e
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:layout_gravity
+     */
+    public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
+    /**
+     * <p>
+     * @attr description
+     * The id of an anchor view that this view should position relative to.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name co.sr.flash_chat:layout_anchor
+     */
+    public static final int CoordinatorLayout_Layout_layout_anchor=1;
+    /**
+     * <p>
+     * @attr description
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * </table>
+     *
+     * @attr name co.sr.flash_chat:layout_anchorGravity
+     */
+    public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
+    /**
+     * <p>
+     * @attr description
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name co.sr.flash_chat:layout_behavior
+     */
+    public static final int CoordinatorLayout_Layout_layout_behavior=3;
+    /**
+     * <p>
+     * @attr description
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * </table>
+     *
+     * @attr name co.sr.flash_chat:layout_dodgeInsetEdges
+     */
+    public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
+    /**
+     * <p>
+     * @attr description
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * </table>
+     *
+     * @attr name co.sr.flash_chat:layout_insetEdge
+     */
+    public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
+    /**
+     * <p>
+     * @attr description
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name co.sr.flash_chat:layout_keyline
+     */
+    public static final int CoordinatorLayout_Layout_layout_keyline=6;
     /**
      * Attributes that can be used with a FontFamily.
      * <p>Includes the following attributes:</p>
@@ -585,13 +1113,13 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority co.appbrewery.flash_chat:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts co.appbrewery.flash_chat:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy co.appbrewery.flash_chat:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout co.appbrewery.flash_chat:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage co.appbrewery.flash_chat:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery co.appbrewery.flash_chat:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderSystemFontFamily co.appbrewery.flash_chat:fontProviderSystemFontFamily}</code></td><td>Provides the system font family name to check before downloading the font.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority co.sr.flash_chat:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts co.sr.flash_chat:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy co.sr.flash_chat:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout co.sr.flash_chat:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage co.sr.flash_chat:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery co.sr.flash_chat:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderSystemFontFamily co.sr.flash_chat:fontProviderSystemFontFamily}</code></td><td>Provides the system font family name to check before downloading the font.</td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -602,8 +1130,8 @@ public final class R {
      * @see #FontFamily_fontProviderSystemFontFamily
      */
     public static final int[] FontFamily={
-      0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b, 
-      0x7f01000c, 0x7f01000d, 0x7f01000e
+      0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f, 
+      0x7f010010, 0x7f010011, 0x7f010012
     };
     /**
      * <p>
@@ -613,7 +1141,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:fontProviderAuthority
+     * @attr name co.sr.flash_chat:fontProviderAuthority
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
@@ -630,7 +1158,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name co.appbrewery.flash_chat:fontProviderCerts
+     * @attr name co.sr.flash_chat:fontProviderCerts
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
@@ -662,7 +1190,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      *
-     * @attr name co.appbrewery.flash_chat:fontProviderFetchStrategy
+     * @attr name co.sr.flash_chat:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
@@ -681,7 +1209,7 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      *
-     * @attr name co.appbrewery.flash_chat:fontProviderFetchTimeout
+     * @attr name co.sr.flash_chat:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
@@ -693,7 +1221,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:fontProviderPackage
+     * @attr name co.sr.flash_chat:fontProviderPackage
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
@@ -705,7 +1233,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:fontProviderQuery
+     * @attr name co.sr.flash_chat:fontProviderQuery
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
@@ -719,7 +1247,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:fontProviderSystemFontFamily
+     * @attr name co.sr.flash_chat:fontProviderSystemFontFamily
      */
     public static final int FontFamily_fontProviderSystemFontFamily=6;
     /**
@@ -734,11 +1262,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font co.appbrewery.flash_chat:font}</code></td><td>The reference to the font file to be used.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle co.appbrewery.flash_chat:fontStyle}</code></td><td>The style of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings co.appbrewery.flash_chat:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight co.appbrewery.flash_chat:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex co.appbrewery.flash_chat:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font co.sr.flash_chat:font}</code></td><td>The reference to the font file to be used.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle co.sr.flash_chat:fontStyle}</code></td><td>The style of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings co.sr.flash_chat:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight co.sr.flash_chat:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex co.sr.flash_chat:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -753,8 +1281,8 @@ public final class R {
      */
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
-      0x01010570, 0x7f010007, 0x7f01000f, 0x7f010010, 
-      0x7f010011, 0x7f01001d
+      0x01010570, 0x7f01000b, 0x7f010013, 0x7f010014, 
+      0x7f010015, 0x7f01002c
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -825,7 +1353,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name co.appbrewery.flash_chat:font
+     * @attr name co.sr.flash_chat:font
      */
     public static final int FontFamilyFont_font=5;
     /**
@@ -845,7 +1373,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name co.appbrewery.flash_chat:fontStyle
+     * @attr name co.sr.flash_chat:fontStyle
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
@@ -859,7 +1387,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:fontVariationSettings
+     * @attr name co.sr.flash_chat:fontVariationSettings
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
@@ -873,7 +1401,7 @@ public final class R {
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name co.appbrewery.flash_chat:fontWeight
+     * @attr name co.sr.flash_chat:fontWeight
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
@@ -884,7 +1412,7 @@ public final class R {
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name co.appbrewery.flash_chat:ttcIndex
+     * @attr name co.sr.flash_chat:ttcIndex
      */
     public static final int FontFamilyFont_ttcIndex=9;
     /**
@@ -1131,22 +1659,153 @@ public final class R {
      */
     public static final int GradientColorItem_android_offset=1;
     /**
+     * Attributes that can be used with a LoadingImageView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #LoadingImageView_circleCrop co.sr.flash_chat:circleCrop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio co.sr.flash_chat:imageAspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust co.sr.flash_chat:imageAspectRatioAdjust}</code></td><td></td></tr>
+     * </table>
+     * @see #LoadingImageView_circleCrop
+     * @see #LoadingImageView_imageAspectRatio
+     * @see #LoadingImageView_imageAspectRatioAdjust
+     */
+    public static final int[] LoadingImageView={
+      0x7f010005, 0x7f010016, 0x7f010017
+    };
+    /**
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#circleCrop}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name co.sr.flash_chat:circleCrop
+     */
+    public static final int LoadingImageView_circleCrop=0;
+    /**
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#imageAspectRatio}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name co.sr.flash_chat:imageAspectRatio
+     */
+    public static final int LoadingImageView_imageAspectRatio=1;
+    /**
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#imageAspectRatioAdjust}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>adjust_height</td><td>2</td><td></td></tr>
+     * <tr><td>adjust_width</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name co.sr.flash_chat:imageAspectRatioAdjust
+     */
+    public static final int LoadingImageView_imageAspectRatioAdjust=2;
+    /**
+     * Attributes that can be used with a SignInButton.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #SignInButton_buttonSize co.sr.flash_chat:buttonSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_colorScheme co.sr.flash_chat:colorScheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_scopeUris co.sr.flash_chat:scopeUris}</code></td><td></td></tr>
+     * </table>
+     * @see #SignInButton_buttonSize
+     * @see #SignInButton_colorScheme
+     * @see #SignInButton_scopeUris
+     */
+    public static final int[] SignInButton={
+      0x7f010004, 0x7f010007, 0x7f010023
+    };
+    /**
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#buttonSize}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>icon_only</td><td>2</td><td></td></tr>
+     * <tr><td>standard</td><td>0</td><td></td></tr>
+     * <tr><td>wide</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name co.sr.flash_chat:buttonSize
+     */
+    public static final int SignInButton_buttonSize=0;
+    /**
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#colorScheme}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>2</td><td></td></tr>
+     * <tr><td>dark</td><td>0</td><td></td></tr>
+     * <tr><td>light</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name co.sr.flash_chat:colorScheme
+     */
+    public static final int SignInButton_colorScheme=1;
+    /**
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#scopeUris}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name co.sr.flash_chat:scopeUris
+     */
+    public static final int SignInButton_scopeUris=2;
+    /**
      * Attributes that can be used with a SplitPairFilter.
      * <p>Includes the following attributes:</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #SplitPairFilter_primaryActivityName co.appbrewery.flash_chat:primaryActivityName}</code></td><td>Component name of the primary activity in the split.</td></tr>
-     * <tr><td><code>{@link #SplitPairFilter_secondaryActivityAction co.appbrewery.flash_chat:secondaryActivityAction}</code></td><td>Action used for secondary activity launch.</td></tr>
-     * <tr><td><code>{@link #SplitPairFilter_secondaryActivityName co.appbrewery.flash_chat:secondaryActivityName}</code></td><td>Component name of the secondary activity in the split.</td></tr>
+     * <tr><td><code>{@link #SplitPairFilter_primaryActivityName co.sr.flash_chat:primaryActivityName}</code></td><td>Component name of the primary activity in the split.</td></tr>
+     * <tr><td><code>{@link #SplitPairFilter_secondaryActivityAction co.sr.flash_chat:secondaryActivityAction}</code></td><td>Action used for secondary activity launch.</td></tr>
+     * <tr><td><code>{@link #SplitPairFilter_secondaryActivityName co.sr.flash_chat:secondaryActivityName}</code></td><td>Component name of the secondary activity in the split.</td></tr>
      * </table>
      * @see #SplitPairFilter_primaryActivityName
      * @see #SplitPairFilter_secondaryActivityAction
      * @see #SplitPairFilter_secondaryActivityName
      */
     public static final int[] SplitPairFilter={
-      0x7f010014, 0x7f010016, 0x7f010017
+      0x7f010021, 0x7f010024, 0x7f010025
     };
     /**
      * <p>
@@ -1157,7 +1816,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:primaryActivityName
+     * @attr name co.sr.flash_chat:primaryActivityName
      */
     public static final int SplitPairFilter_primaryActivityName=0;
     /**
@@ -1168,7 +1827,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:secondaryActivityAction
+     * @attr name co.sr.flash_chat:secondaryActivityAction
      */
     public static final int SplitPairFilter_secondaryActivityAction=1;
     /**
@@ -1180,7 +1839,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:secondaryActivityName
+     * @attr name co.sr.flash_chat:secondaryActivityName
      */
     public static final int SplitPairFilter_secondaryActivityName=2;
     /**
@@ -1190,17 +1849,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #SplitPairRule_clearTop co.appbrewery.flash_chat:clearTop}</code></td><td>If there is an existing split with the same primary container, indicates whether the
+     * <tr><td><code>{@link #SplitPairRule_clearTop co.sr.flash_chat:clearTop}</code></td><td>If there is an existing split with the same primary container, indicates whether the
      * existing secondary container on top and all activities in it should be destroyed when a new
      * split is created using this rule.</td></tr>
-     * <tr><td><code>{@link #SplitPairRule_finishPrimaryWithSecondary co.appbrewery.flash_chat:finishPrimaryWithSecondary}</code></td><td>When all activities are finished in the secondary container, the activity in the
+     * <tr><td><code>{@link #SplitPairRule_finishPrimaryWithSecondary co.sr.flash_chat:finishPrimaryWithSecondary}</code></td><td>When all activities are finished in the secondary container, the activity in the
      * primary container that created the split should also be finished.</td></tr>
-     * <tr><td><code>{@link #SplitPairRule_finishSecondaryWithPrimary co.appbrewery.flash_chat:finishSecondaryWithPrimary}</code></td><td>When all activities are finished in the primary container, the activities in the
+     * <tr><td><code>{@link #SplitPairRule_finishSecondaryWithPrimary co.sr.flash_chat:finishSecondaryWithPrimary}</code></td><td>When all activities are finished in the primary container, the activities in the
      * secondary container in the split should also be finished.</td></tr>
-     * <tr><td><code>{@link #SplitPairRule_splitLayoutDirection co.appbrewery.flash_chat:splitLayoutDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SplitPairRule_splitMinSmallestWidth co.appbrewery.flash_chat:splitMinSmallestWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SplitPairRule_splitMinWidth co.appbrewery.flash_chat:splitMinWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SplitPairRule_splitRatio co.appbrewery.flash_chat:splitRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPairRule_splitLayoutDirection co.sr.flash_chat:splitLayoutDirection}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPairRule_splitMinSmallestWidth co.sr.flash_chat:splitMinSmallestWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPairRule_splitMinWidth co.sr.flash_chat:splitMinWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPairRule_splitRatio co.sr.flash_chat:splitRatio}</code></td><td></td></tr>
      * </table>
      * @see #SplitPairRule_clearTop
      * @see #SplitPairRule_finishPrimaryWithSecondary
@@ -1211,8 +1870,8 @@ public final class R {
      * @see #SplitPairRule_splitRatio
      */
     public static final int[] SplitPairRule={
-      0x7f010004, 0x7f010005, 0x7f010006, 0x7f010019, 
-      0x7f01001a, 0x7f01001b, 0x7f01001c
+      0x7f010006, 0x7f010009, 0x7f01000a, 0x7f010027, 
+      0x7f010028, 0x7f010029, 0x7f01002a
     };
     /**
      * <p>
@@ -1225,7 +1884,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name co.appbrewery.flash_chat:clearTop
+     * @attr name co.sr.flash_chat:clearTop
      */
     public static final int SplitPairRule_clearTop=0;
     /**
@@ -1237,7 +1896,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name co.appbrewery.flash_chat:finishPrimaryWithSecondary
+     * @attr name co.sr.flash_chat:finishPrimaryWithSecondary
      */
     public static final int SplitPairRule_finishPrimaryWithSecondary=1;
     /**
@@ -1249,11 +1908,11 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name co.appbrewery.flash_chat:finishSecondaryWithPrimary
+     * @attr name co.sr.flash_chat:finishSecondaryWithPrimary
      */
     public static final int SplitPairRule_finishSecondaryWithPrimary=2;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitLayoutDirection}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitLayoutDirection}
      * attribute's value can be found in the {@link #SplitPairRule} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1267,11 +1926,11 @@ public final class R {
      * <tr><td>rtl</td><td>2</td><td></td></tr>
      * </table>
      *
-     * @attr name co.appbrewery.flash_chat:splitLayoutDirection
+     * @attr name co.sr.flash_chat:splitLayoutDirection
      */
     public static final int SplitPairRule_splitLayoutDirection=3;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitMinSmallestWidth}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitMinSmallestWidth}
      * attribute's value can be found in the {@link #SplitPairRule} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1280,11 +1939,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name co.appbrewery.flash_chat:splitMinSmallestWidth
+     * @attr name co.sr.flash_chat:splitMinSmallestWidth
      */
     public static final int SplitPairRule_splitMinSmallestWidth=4;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitMinWidth}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitMinWidth}
      * attribute's value can be found in the {@link #SplitPairRule} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1293,16 +1952,16 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name co.appbrewery.flash_chat:splitMinWidth
+     * @attr name co.sr.flash_chat:splitMinWidth
      */
     public static final int SplitPairRule_splitMinWidth=5;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitRatio}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitRatio}
      * attribute's value can be found in the {@link #SplitPairRule} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name co.appbrewery.flash_chat:splitRatio
+     * @attr name co.sr.flash_chat:splitRatio
      */
     public static final int SplitPairRule_splitRatio=6;
     /**
@@ -1312,11 +1971,11 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #SplitPlaceholderRule_placeholderActivityName co.appbrewery.flash_chat:placeholderActivityName}</code></td><td>Component name of the placeholder activity in the split.</td></tr>
-     * <tr><td><code>{@link #SplitPlaceholderRule_splitLayoutDirection co.appbrewery.flash_chat:splitLayoutDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SplitPlaceholderRule_splitMinSmallestWidth co.appbrewery.flash_chat:splitMinSmallestWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SplitPlaceholderRule_splitMinWidth co.appbrewery.flash_chat:splitMinWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SplitPlaceholderRule_splitRatio co.appbrewery.flash_chat:splitRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPlaceholderRule_placeholderActivityName co.sr.flash_chat:placeholderActivityName}</code></td><td>Component name of the placeholder activity in the split.</td></tr>
+     * <tr><td><code>{@link #SplitPlaceholderRule_splitLayoutDirection co.sr.flash_chat:splitLayoutDirection}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPlaceholderRule_splitMinSmallestWidth co.sr.flash_chat:splitMinSmallestWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPlaceholderRule_splitMinWidth co.sr.flash_chat:splitMinWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SplitPlaceholderRule_splitRatio co.sr.flash_chat:splitRatio}</code></td><td></td></tr>
      * </table>
      * @see #SplitPlaceholderRule_placeholderActivityName
      * @see #SplitPlaceholderRule_splitLayoutDirection
@@ -1325,8 +1984,8 @@ public final class R {
      * @see #SplitPlaceholderRule_splitRatio
      */
     public static final int[] SplitPlaceholderRule={
-      0x7f010013, 0x7f010019, 0x7f01001a, 0x7f01001b, 
-      0x7f01001c
+      0x7f010020, 0x7f010027, 0x7f010028, 0x7f010029, 
+      0x7f01002a
     };
     /**
      * <p>
@@ -1336,11 +1995,11 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name co.appbrewery.flash_chat:placeholderActivityName
+     * @attr name co.sr.flash_chat:placeholderActivityName
      */
     public static final int SplitPlaceholderRule_placeholderActivityName=0;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitLayoutDirection}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitLayoutDirection}
      * attribute's value can be found in the {@link #SplitPlaceholderRule} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1354,11 +2013,11 @@ public final class R {
      * <tr><td>rtl</td><td>2</td><td></td></tr>
      * </table>
      *
-     * @attr name co.appbrewery.flash_chat:splitLayoutDirection
+     * @attr name co.sr.flash_chat:splitLayoutDirection
      */
     public static final int SplitPlaceholderRule_splitLayoutDirection=1;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitMinSmallestWidth}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitMinSmallestWidth}
      * attribute's value can be found in the {@link #SplitPlaceholderRule} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1367,11 +2026,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name co.appbrewery.flash_chat:splitMinSmallestWidth
+     * @attr name co.sr.flash_chat:splitMinSmallestWidth
      */
     public static final int SplitPlaceholderRule_splitMinSmallestWidth=2;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitMinWidth}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitMinWidth}
      * attribute's value can be found in the {@link #SplitPlaceholderRule} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1380,16 +2039,16 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name co.appbrewery.flash_chat:splitMinWidth
+     * @attr name co.sr.flash_chat:splitMinWidth
      */
     public static final int SplitPlaceholderRule_splitMinWidth=3;
     /**
-     * <p>This symbol is the offset where the {@link co.appbrewery.flash_chat.R.attr#splitRatio}
+     * <p>This symbol is the offset where the {@link co.sr.flash_chat.R.attr#splitRatio}
      * attribute's value can be found in the {@link #SplitPlaceholderRule} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name co.appbrewery.flash_chat:splitRatio
+     * @attr name co.sr.flash_chat:splitRatio
      */
     public static final int SplitPlaceholderRule_splitRatio=4;
   }
