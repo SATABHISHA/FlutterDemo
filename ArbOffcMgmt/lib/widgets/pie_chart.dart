@@ -67,7 +67,7 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                                      child: EmployeeDetailsScreen(departmentName: 'Designer',)),
+                                      child: EmployeeDetailsScreen(departmentName: 'Designer', nameList: designerList,)),
                                 )
                             );
                           }if (touchedIndex == 1){
@@ -76,7 +76,7 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                                      child: EmployeeDetailsScreen(departmentName: '.Net')),
+                                      child: EmployeeDetailsScreen(departmentName: '.Net', nameList: dotNetList,)),
                                 )
                             );
                           }if (touchedIndex == 2){
@@ -85,7 +85,7 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                                      child: EmployeeDetailsScreen(departmentName: 'Mobile')),
+                                      child: EmployeeDetailsScreen(departmentName: 'Mobile', nameList: mobileList,)),
                                 )
                             );
                           }if (touchedIndex == 3){
@@ -94,7 +94,7 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                                      child: EmployeeDetailsScreen(departmentName: 'Php')),
+                                      child: EmployeeDetailsScreen(departmentName: 'Php', nameList: phpList,)),
                                 )
                             );
                           }
