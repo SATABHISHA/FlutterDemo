@@ -1,5 +1,7 @@
+import 'package:arb_offc/screens/employee_details.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:arb_offc/data/employee_data.dart';
 
 class PieChartDataDemo extends StatefulWidget {
   const PieChartDataDemo({Key? key}) : super(key: key);
@@ -10,8 +12,30 @@ class PieChartDataDemo extends StatefulWidget {
 
 class _PieChartDataDemoState extends State<PieChartDataDemo> {
   int touchedIndex = -1;
+
+
   @override
   Widget build(BuildContext context) {
+    List<EmployeeDataList> designerList = [];
+    designerList.add(EmployeeDataList(name: 'Abhishek Aich'));
+    designerList.add(EmployeeDataList(name: 'Ramen',));
+
+    List<EmployeeDataList> phpList = [];
+    phpList.add(EmployeeDataList(name: 'Abc',));
+    phpList.add(EmployeeDataList(name: 'def',));
+
+    List<EmployeeDataList> dotNetList = [];
+    dotNetList.add(EmployeeDataList(name: 'Arup Dutta',));
+    dotNetList.add(EmployeeDataList(name: 'Manish',));
+    dotNetList.add(EmployeeDataList(name: 'Amrit Maity',));
+    dotNetList.add(EmployeeDataList(name: 'Partha Pratim',));
+    dotNetList.add(EmployeeDataList(name: 'Amit',));
+    dotNetList.add(EmployeeDataList(name: 'Kola',));
+    dotNetList.add(EmployeeDataList(name: 'Jol Doshyu',));
+
+    List<EmployeeDataList> mobileList = [];
+    mobileList.add(EmployeeDataList(name: 'Satabhisha Roy',));
+
     return AspectRatio(
       aspectRatio: 1.3,
       child: Card(
@@ -38,7 +62,41 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                           touchedIndex = pieTouchResponse
                               .touchedSection!.touchedSectionIndex;
                           if (touchedIndex == 0){
-
+                             showModalBottomSheet(isScrollControlled: true,
+                                context: context,
+                                builder: (context)=> SingleChildScrollView(
+                                  child: Container(
+                                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                                      child: EmployeeDetailsScreen(departmentName: 'Designer',)),
+                                )
+                            );
+                          }if (touchedIndex == 1){
+                             showModalBottomSheet(isScrollControlled: true,
+                                context: context,
+                                builder: (context)=> SingleChildScrollView(
+                                  child: Container(
+                                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                                      child: EmployeeDetailsScreen(departmentName: '.Net')),
+                                )
+                            );
+                          }if (touchedIndex == 2){
+                             showModalBottomSheet(isScrollControlled: true,
+                                context: context,
+                                builder: (context)=> SingleChildScrollView(
+                                  child: Container(
+                                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                                      child: EmployeeDetailsScreen(departmentName: 'Mobile')),
+                                )
+                            );
+                          }if (touchedIndex == 3){
+                             showModalBottomSheet(isScrollControlled: true,
+                                context: context,
+                                builder: (context)=> SingleChildScrollView(
+                                  child: Container(
+                                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                                      child: EmployeeDetailsScreen(departmentName: 'Php')),
+                                )
+                            );
                           }
                           print(touchedIndex);
                         });

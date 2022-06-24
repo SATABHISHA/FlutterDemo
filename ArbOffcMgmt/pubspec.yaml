@@ -38,6 +38,7 @@ dependencies:
 #  pie_chart: ^5.3.1
   fl_chart: ^0.55.0
 #  indicator: ^0.0.7
+  bottom_sheet: ^3.1.1
 
 dev_dependencies:
   flutter_test:
