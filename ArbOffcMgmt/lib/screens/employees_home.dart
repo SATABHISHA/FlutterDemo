@@ -1,3 +1,4 @@
+import 'package:arb_offc/widgets/pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -50,6 +51,7 @@ class EmployeesHome extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
               ),
+              child: PieChartData(),
             ),
           )
         ],
