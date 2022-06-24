@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class EmployeesHome extends StatelessWidget {
   const EmployeesHome({Key? key}) : super(key: key);
@@ -33,8 +34,9 @@ class EmployeesHome extends StatelessWidget {
               children: [
                 CircleAvatar(child: Icon(Icons.list, size: 30.0, color: Colors.lightBlueAccent,), backgroundColor: Colors.white, radius: 30.0,),
                 SizedBox(height: 10.0,),
-                Text('Employee(s) Dashboard', style: TextStyle(color: Colors.white, fontSize: 50.0, fontWeight: FontWeight.w700),),
+                WavyAnimatedTextKit(text: ['Employee(s) Dashboard'],textStyle: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold)),
                 // Text('12 Tasks', style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),),
+
               ],
 
             ),
