@@ -51,7 +51,7 @@ class EmployeesHome extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
               ),
-              child: PieChartData(),
+              child: PieChartDataDemo(),
             ),
           )
         ],
