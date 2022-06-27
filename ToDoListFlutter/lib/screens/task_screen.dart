@@ -63,7 +63,7 @@ class _TaskScreenState extends State<TaskScreen> {
                 CircleAvatar(child: Icon(Icons.list, size: 30.0, color: Colors.lightBlueAccent,), backgroundColor: Colors.white, radius: 30.0,),
                 SizedBox(height: 10.0,),
                 Text('ToDoList', style: TextStyle(color: Colors.white, fontSize: 50.0, fontWeight: FontWeight.w700),),
-                Text('12 Tasks', style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),),
+                Text('${tasks.length} Tasks', style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),),
               ],
 
             ),
