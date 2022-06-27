@@ -6,8 +6,9 @@ import 'package:todoey/widgets/task_tile.dart';
 class TaskTile extends StatelessWidget{
   final bool isChecked;
   final String taskTitle;
+  final Function chekBoxCallback;
 
-  TaskTile({required this.isChecked, required this.taskTitle});
+  TaskTile({required this.isChecked, required this.taskTitle, required this.chekBoxCallback});
 
   // void checkboxCallback
 
@@ -18,14 +19,12 @@ class TaskTile extends StatelessWidget{
       trailing: Checkbox(
     activeColor:  Colors.lightBlueAccent,
     value: isChecked,
-    onChanged: (bool? value) {  },));
+    onChanged: (newValue) {
+      chekBoxCallback(newValue);
+    },));
   }
 }
-/*(bool checkboxState){
-setState((){
-isChecked = checkboxState;
-});
-})*/
+
 class TaskCheckbox extends StatelessWidget {
 
   late final bool checkboxState;
