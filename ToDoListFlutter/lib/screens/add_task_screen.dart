@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey/models/task_data.dart';
 import 'package:todoey/screens/add_task_screen.dart';
+
+import '../models/task.dart';
 
 class AddTaskScreen extends StatelessWidget {
   // const AddTaskScreen({Key? key}) : super(key: key);
 
-  final Function addTaskCallback;
-  AddTaskScreen(this.addTaskCallback);
+  // final Function addTaskCallback;
+  // AddTaskScreen(this.addTaskCallback);
+  String newTaskTitle = "";
   @override
   Widget build(BuildContext context) {
     late String newTasktitle;
@@ -24,7 +29,15 @@ class AddTaskScreen extends StatelessWidget {
             Text('Add Task', style: TextStyle(fontSize: 30.0, color: Colors.lightBlue),textAlign: TextAlign.center,),
             TextField(autofocus: true, textAlign: TextAlign.center, onChanged: (newText){newTasktitle = newText;},),
             SizedBox(height: 10,),
-            FlatButton(onPressed: () {addTaskCallback(newTasktitle);}, child: Text('Add'), color: Colors.lightBlueAccent,),
+            FlatButton(
+              onPressed: () {
+                // final task = Task(name: newTaskTitle);
+                print(newTasktitle);
+                Provider.of<TaskData>(context, listen: false).addTask(newTaskTitle);
+                Navigator.pop(context);
+                },
+              child: Text('Add'),
+              color: Colors.lightBlueAccent,),
           ],
         ),
       ),
