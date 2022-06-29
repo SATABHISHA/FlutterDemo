@@ -1,4 +1,5 @@
 import 'package:arb_offc/screens/employee_details.dart';
+import 'package:arb_offc/screens/employee_list.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:arb_offc/data/employee_data.dart';
@@ -62,13 +63,17 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                           touchedIndex = pieTouchResponse
                               .touchedSection!.touchedSectionIndex;
                           if (touchedIndex == 0){
-                             showModalBottomSheet(isScrollControlled: true,
+                             /*showModalBottomSheet(isScrollControlled: true,
                                 context: context,
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
                                       child: EmployeeDetailsScreen(departmentName: 'Designer', nameList: designerList,)),
                                 )
+                            );*/
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => EmployeeList(designerList,)),
                             );
                           }if (touchedIndex == 1){
                              showModalBottomSheet(isScrollControlled: true,

@@ -2,9 +2,14 @@ import 'package:arb_offc/widgets/pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
-class EmployeesHome extends StatelessWidget {
+class EmployeesHome extends StatefulWidget {
   const EmployeesHome({Key? key}) : super(key: key);
 
+  @override
+  State<EmployeesHome> createState() => _EmployeesHomeState();
+}
+
+class _EmployeesHomeState extends State<EmployeesHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
