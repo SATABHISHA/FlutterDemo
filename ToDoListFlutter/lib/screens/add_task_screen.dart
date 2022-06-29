@@ -13,7 +13,8 @@ class AddTaskScreen extends StatelessWidget {
   String newTaskTitle = "";
   @override
   Widget build(BuildContext context) {
-    late String newTasktitle;
+    // late String newTasktitle;
+
     return Container(
       color: Color(0xff757575),
       // color: Colors.red,
@@ -27,12 +28,12 @@ class AddTaskScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text('Add Task', style: TextStyle(fontSize: 30.0, color: Colors.lightBlue),textAlign: TextAlign.center,),
-            TextField(autofocus: true, textAlign: TextAlign.center, onChanged: (newText){newTasktitle = newText;},),
+            TextField(autofocus: true, textAlign: TextAlign.center, onChanged: (newText){newTaskTitle = newText;},),
             SizedBox(height: 10,),
             FlatButton(
               onPressed: () {
                 // final task = Task(name: newTaskTitle);
-                print(newTasktitle);
+                print(newTaskTitle);
                 Provider.of<TaskData>(context, listen: false).addTask(newTaskTitle);
                 Navigator.pop(context);
                 },
