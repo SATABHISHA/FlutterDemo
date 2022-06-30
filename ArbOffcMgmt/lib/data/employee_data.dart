@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class EmployeeDataList extends StatelessWidget {
+/*class EmployeeDataList extends StatelessWidget {
   // const EmployeeDataList({Key? key}) : super(key: key);
   final name;
   EmployeeDataList({this.name});
@@ -11,8 +11,7 @@ class EmployeeDataList extends StatelessWidget {
       children: [Text(name)],
     );
   }
+}*/
 
-
-}
 
 

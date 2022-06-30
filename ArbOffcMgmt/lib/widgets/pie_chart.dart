@@ -5,7 +5,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:arb_offc/data/employee_data.dart';
 
 class PieChartDataDemo extends StatefulWidget {
-  const PieChartDataDemo({Key? key}) : super(key: key);
+  // const PieChartDataDemo({Key? key}) : super(key: key);
 
   @override
   State<PieChartDataDemo> createState() => _PieChartDataDemoState();
@@ -17,7 +17,7 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
 
   @override
   Widget build(BuildContext context) {
-    List<EmployeeDataList> designerList = [];
+    /*List<EmployeeDataList> designerList = [];
     designerList.add(EmployeeDataList(name: 'Abhishek Aich'));
     designerList.add(EmployeeDataList(name: 'Ramen',));
 
@@ -35,7 +35,7 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
     dotNetList.add(EmployeeDataList(name: 'Jol Doshyu',));
 
     List<EmployeeDataList> mobileList = [];
-    mobileList.add(EmployeeDataList(name: 'Satabhisha Roy',));
+    mobileList.add(EmployeeDataList(name: 'Satabhisha Roy',));*/
 
     return AspectRatio(
       aspectRatio: 1.3,
@@ -71,37 +71,38 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                       child: EmployeeDetailsScreen(departmentName: 'Designer', nameList: designerList,)),
                                 )
                             );*/
-                            Navigator.push(
+                           /* Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => EmployeeList(designerList,)),
-                            );
+                            );*/
+                            Navigator.pushNamed(context, EmployeeList.id);
                           }if (touchedIndex == 1){
-                             showModalBottomSheet(isScrollControlled: true,
+                            /* showModalBottomSheet(isScrollControlled: true,
                                 context: context,
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
                                       child: EmployeeDetailsScreen(departmentName: '.Net', nameList: dotNetList,)),
                                 )
-                            );
+                            );*/
                           }if (touchedIndex == 2){
-                             showModalBottomSheet(isScrollControlled: true,
+                             /*showModalBottomSheet(isScrollControlled: true,
                                 context: context,
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
                                       child: EmployeeDetailsScreen(departmentName: 'Mobile', nameList: mobileList,)),
                                 )
-                            );
+                            );*/
                           }if (touchedIndex == 3){
-                             showModalBottomSheet(isScrollControlled: true,
+                            /* showModalBottomSheet(isScrollControlled: true,
                                 context: context,
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
                                       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
                                       child: EmployeeDetailsScreen(departmentName: 'Php', nameList: phpList,)),
                                 )
-                            );
+                            );*/
                           }
                           print(touchedIndex);
                         });

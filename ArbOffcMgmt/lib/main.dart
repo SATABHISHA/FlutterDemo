@@ -1,5 +1,9 @@
+import 'package:arb_offc/screens/employee_list.dart';
 import 'package:arb_offc/screens/employees_home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'data/employee_department_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +15,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: EmployeesHome(),
+    return ChangeNotifierProvider(
+      create: (context) => EmployeeDepartmentList(),
+      child: MaterialApp(
+        home: EmployeesHome(),
+        initialRoute: EmployeesHome.id,
+        routes: {
+          EmployeesHome.id : (context)=>EmployeesHome(),
+          EmployeeList.id: (context)=>EmployeeList()
+        },
+      ),
     );
   }
 }

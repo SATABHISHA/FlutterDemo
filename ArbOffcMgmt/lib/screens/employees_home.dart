@@ -4,6 +4,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 
 class EmployeesHome extends StatefulWidget {
   const EmployeesHome({Key? key}) : super(key: key);
+  static String id = 'employees_home';
 
   @override
   State<EmployeesHome> createState() => _EmployeesHomeState();

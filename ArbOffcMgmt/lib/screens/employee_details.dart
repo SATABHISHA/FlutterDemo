@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class EmployeeDetailsScreen extends StatelessWidget {
   // const EmployeeDetailsScreen({Key? key}) : super(key: key);
-  String departmentName;
+  /*String departmentName;
   List<EmployeeDataList> nameList = [];
-  EmployeeDetailsScreen({required this.departmentName, required this.nameList});
+  EmployeeDetailsScreen({required this.departmentName, required this.nameList});*/
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +23,11 @@ class EmployeeDetailsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text('$departmentName', style: TextStyle(fontSize: 30.0, color: Colors.lightBlue),textAlign: TextAlign.center,),
+              Text('', style: TextStyle(fontSize: 30.0, color: Colors.lightBlue),textAlign: TextAlign.center,),
                Container(
                  height: 100,
                  child: ListView(
-                   children: nameList,
+                   children: [],
                  ),
                )
                  ],
