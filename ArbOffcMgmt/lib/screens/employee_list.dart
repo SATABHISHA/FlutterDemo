@@ -17,7 +17,7 @@ class EmployeeList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
      appBar: AppBar(
-         title: Text('Employee List', style: TextStyle(fontSize: 12),),
+         title: Text('Employee List', style: TextStyle(fontSize: 20),),
          leading:IconButton(
        icon: Icon(Icons.arrow_back_ios, color: Colors.redAccent),
        onPressed: () => Navigator.of(context).pop(),

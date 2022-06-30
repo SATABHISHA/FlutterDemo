@@ -1,12 +1,14 @@
+import 'package:arb_offc/data/employee_department_list.dart';
 import 'package:arb_offc/screens/employee_details.dart';
 import 'package:arb_offc/screens/employee_list.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:arb_offc/data/employee_data.dart';
+import 'package:provider/provider.dart';
 
 class PieChartDataDemo extends StatefulWidget {
   // const PieChartDataDemo({Key? key}) : super(key: key);
-
+ static String department = '';
   @override
   State<PieChartDataDemo> createState() => _PieChartDataDemoState();
 }
@@ -75,6 +77,8 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                               context,
                               MaterialPageRoute(builder: (context) => EmployeeList(designerList,)),
                             );*/
+
+                            PieChartDataDemo.department = 'designer';
                             Navigator.pushNamed(context, EmployeeList.id);
                           }if (touchedIndex == 1){
                             /* showModalBottomSheet(isScrollControlled: true,
@@ -85,6 +89,8 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                       child: EmployeeDetailsScreen(departmentName: '.Net', nameList: dotNetList,)),
                                 )
                             );*/
+                            PieChartDataDemo.department = 'dotnet';
+                            Navigator.pushNamed(context, EmployeeList.id);
                           }if (touchedIndex == 2){
                              /*showModalBottomSheet(isScrollControlled: true,
                                 context: context,
@@ -94,6 +100,8 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                       child: EmployeeDetailsScreen(departmentName: 'Mobile', nameList: mobileList,)),
                                 )
                             );*/
+                            PieChartDataDemo.department = 'mobile';
+                            Navigator.pushNamed(context, EmployeeList.id);
                           }if (touchedIndex == 3){
                             /* showModalBottomSheet(isScrollControlled: true,
                                 context: context,
@@ -103,6 +111,8 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                       child: EmployeeDetailsScreen(departmentName: 'Php', nameList: phpList,)),
                                 )
                             );*/
+                            PieChartDataDemo.department = 'php';
+                            Navigator.pushNamed(context, EmployeeList.id);
                           }
                           print(touchedIndex);
                         });

@@ -32,7 +32,8 @@ class _EmployeesHomeState extends State<EmployeesHome> {
         },
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             padding: EdgeInsets.only(top: 60, left: 30.0, right: 30.0, bottom: 30.0),

@@ -6,6 +6,7 @@ import '../model/employee.dart';
 
 class EmployeeDepartmentList extends ChangeNotifier{
 
+
   List<Employee> _designerList = [
     Employee(name: 'Abhishek Aich'),
     Employee(name: 'Ramen')
@@ -55,7 +56,29 @@ class EmployeeDepartmentList extends ChangeNotifier{
     return _mobileList.length;
    }
 
-   String setDepartment(String department){
-    return department;
+   int getCount(String department){
+    int count = 0;
+    if(department == 'dotnet'){
+      return _dotNetList.length;
+    }
+    if(department == 'designer'){
+      return _designerList.length;
+    }
+    if(department == 'mobile'){
+      return _mobileList.length;
+    }
+    if(designer == 'php'){
+      return _phpList.length;
+    }
+    return count;
    }
+
+   /* set setDepartment(String department){
+    this.department = department;
+    notifyListeners();
+   }
+   String get getDepartment {
+    return department;
+    notifyListeners();
+   }*/
 }
