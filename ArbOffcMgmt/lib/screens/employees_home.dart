@@ -4,6 +4,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 
 import '../widgets/sf_circular_pie_chart.dart';
 
+final GlobalKey<ScaffoldState> _key = GlobalKey();
+
 class EmployeesHome extends StatefulWidget {
   const EmployeesHome({Key? key}) : super(key: key);
   static String id = 'employees_home';
@@ -16,7 +18,9 @@ class _EmployeesHomeState extends State<EmployeesHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       backgroundColor: Colors.lightBlueAccent,
+      drawer: CustomDrawer(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         backgroundColor: Colors.lightBlueAccent,
@@ -43,7 +47,13 @@ class _EmployeesHomeState extends State<EmployeesHome> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
-                  child: Icon(Icons.list, size: 30.0, color: Colors.lightBlueAccent,),
+                  child: InkWell(
+                      onTap: (){
+                        print('Clicked');
+                        _key.currentState!.openDrawer();
+                      },
+                      child: Icon(Icons.list, size: 30.0, color: Colors.lightBlueAccent,)
+                  ),
                   backgroundColor: Colors.white,
                    radius: 30.0,),
                 SizedBox(height: 10.0,),
@@ -66,6 +76,49 @@ class _EmployeesHomeState extends State<EmployeesHome> {
               child: SfCircularPieChart(),
             ),
           )
+        ],
+      ),
+    );
+  }
+}
+
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      // Add a ListView to the drawer. This ensures the user can scroll
+      // through the options in the drawer if there isn't enough vertical
+      // space to fit everything.
+      child: ListView(
+        // Important: Remove any padding from the ListView.
+        padding: EdgeInsets.zero,
+        children: [
+          const DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Text('Drawer Header'),
+          ),
+          ListTile(
+            title: const Text('Item 1'),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: const Text('Item 2'),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+              Navigator.pop(context);
+            },
+          ),
         ],
       ),
     );
