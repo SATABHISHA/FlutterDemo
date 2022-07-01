@@ -28,11 +28,10 @@ class EmployeeList extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
          children: [
-           Center(
-             child: Expanded(
-               flex: 0,
+           Expanded(
+             child: Center(
                child: Container(
-                 height: 400,
+                 height: 200,
                  child: EmployeeListName(),
                ),
              ),

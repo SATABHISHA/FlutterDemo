@@ -1,6 +1,9 @@
+import 'dart:html';
+
 import 'package:arb_offc/data/employee_department_list.dart';
 import 'package:arb_offc/screens/employee_details.dart';
 import 'package:arb_offc/screens/employee_list.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:arb_offc/data/employee_data.dart';
@@ -15,6 +18,7 @@ class PieChartDataDemo extends StatefulWidget {
 
 class _PieChartDataDemoState extends State<PieChartDataDemo> {
   int touchedIndex = -1;
+  bool absorbingStatus = false;
 
 
   @override
@@ -49,6 +53,7 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
               height: 18,
             ),
             Expanded(
+              flex: 1,
               child: AspectRatio(
                 aspectRatio: 1,
                 child: PieChart(
@@ -60,12 +65,13 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                               pieTouchResponse == null ||
                               pieTouchResponse.touchedSection == null) {
                             touchedIndex = -1;
+                            absorbingStatus = false;
                             return;
                           }
                           touchedIndex = pieTouchResponse
                               .touchedSection!.touchedSectionIndex;
                           if (touchedIndex == 0){
-                             /*showModalBottomSheet(isScrollControlled: true,
+                            /* showModalBottomSheet(isScrollControlled: true,
                                 context: context,
                                 builder: (context)=> SingleChildScrollView(
                                   child: Container(
@@ -73,59 +79,36 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
                                       child: EmployeeDetailsScreen(departmentName: 'Designer', nameList: designerList,)),
                                 )
                             );*/
-                           /* Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => EmployeeList(designerList,)),
-                            );*/
-
+                            absorbingStatus = false;
                             PieChartDataDemo.department = 'designer';
                             Navigator.pushNamed(context, EmployeeList.id);
+
                           }if (touchedIndex == 1){
-                            /* showModalBottomSheet(isScrollControlled: true,
-                                context: context,
-                                builder: (context)=> SingleChildScrollView(
-                                  child: Container(
-                                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                                      child: EmployeeDetailsScreen(departmentName: '.Net', nameList: dotNetList,)),
-                                )
-                            );*/
+                            absorbingStatus = false;
                             PieChartDataDemo.department = 'dotnet';
                             Navigator.pushNamed(context, EmployeeList.id);
                           }if (touchedIndex == 2){
-                             /*showModalBottomSheet(isScrollControlled: true,
-                                context: context,
-                                builder: (context)=> SingleChildScrollView(
-                                  child: Container(
-                                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                                      child: EmployeeDetailsScreen(departmentName: 'Mobile', nameList: mobileList,)),
-                                )
-                            );*/
+                            absorbingStatus = false;
                             PieChartDataDemo.department = 'mobile';
                             Navigator.pushNamed(context, EmployeeList.id);
                           }if (touchedIndex == 3){
-                            /* showModalBottomSheet(isScrollControlled: true,
-                                context: context,
-                                builder: (context)=> SingleChildScrollView(
-                                  child: Container(
-                                      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                                      child: EmployeeDetailsScreen(departmentName: 'Php', nameList: phpList,)),
-                                )
-                            );*/
+                            absorbingStatus = false;
                             PieChartDataDemo.department = 'php';
                             Navigator.pushNamed(context, EmployeeList.id);
                           }
-                          print(touchedIndex);
                         });
+                        print(touchedIndex);
                       }),
                       borderData: FlBorderData(
                         show: false,
                       ),
                       sectionsSpace: 0,
                       centerSpaceRadius: 0,
-                      sections: showingSections()),
+                      sections: showingSections()
+                      ),
+                  ),
                 ),
               ),
-            ),
             Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
@@ -177,8 +160,10 @@ class _PieChartDataDemoState extends State<PieChartDataDemo> {
   List<PieChartSectionData> showingSections() {
     return List.generate(4, (i) {
       final isTouched = i == touchedIndex;
-      final fontSize = isTouched ? 25.0 : 16.0;
-      final radius = isTouched ? 180.0 : 150.0;
+      // final fontSize = isTouched ? 25.0 : 16.0;
+      final fontSize = isTouched ? 16.0 : 16.0;
+      // final radius = isTouched ? 180.0 : 150.0;
+      final radius = isTouched ? 150.0 : 150.0;
       switch (i) {
         case 0:
           return PieChartSectionData(

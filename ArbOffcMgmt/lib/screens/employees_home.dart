@@ -2,6 +2,8 @@ import 'package:arb_offc/widgets/pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
+import '../widgets/sf_circular_pie_chart.dart';
+
 class EmployeesHome extends StatefulWidget {
   const EmployeesHome({Key? key}) : super(key: key);
   static String id = 'employees_home';
@@ -58,7 +60,7 @@ class _EmployeesHomeState extends State<EmployeesHome> {
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
               ),
-              child: PieChartDataDemo(),
+              child: SfCircularPieChart(),
             ),
           )
         ],

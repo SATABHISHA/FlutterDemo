@@ -1,5 +1,6 @@
 import 'package:arb_offc/model/employee.dart';
 import 'package:arb_offc/widgets/pie_chart.dart';
+import 'package:arb_offc/widgets/sf_circular_pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:arb_offc/data/employee_department_list.dart';
@@ -14,21 +15,21 @@ class EmployeeListName extends StatelessWidget {
       return ListView.builder(
           itemBuilder: (context, index){
             var name;
-            if(PieChartDataDemo.department == 'dotnet'){
+            if(SfCircularPieChart.department == 'dotnet'){
               name = value.dotNet[index];
             }
-            if(PieChartDataDemo.department == 'designer'){
+            if(SfCircularPieChart.department == 'designer'){
               name = value.designer[index];
             }
-            if(PieChartDataDemo.department == 'mobile'){
+            if(SfCircularPieChart.department == 'mobile'){
               name = value.mobile[index];
             }
-            if(PieChartDataDemo.department == 'php'){
+            if(SfCircularPieChart.department == 'php'){
               name = value.php[index];
             }
             // final name = value.designer[index];
             return Text(name.name, textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),);
-            },itemCount: value.getCount(PieChartDataDemo.department)
+            },itemCount: value.getCount(SfCircularPieChart.department)
       );
 
       },

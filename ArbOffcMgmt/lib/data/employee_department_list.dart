@@ -67,7 +67,7 @@ class EmployeeDepartmentList extends ChangeNotifier{
     if(department == 'mobile'){
       return _mobileList.length;
     }
-    if(designer == 'php'){
+    if(department == 'php'){
       return _phpList.length;
     }
     return count;
