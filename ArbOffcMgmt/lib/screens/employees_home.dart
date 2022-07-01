@@ -42,7 +42,10 @@ class _EmployeesHomeState extends State<EmployeesHome> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(child: Icon(Icons.list, size: 30.0, color: Colors.lightBlueAccent,), backgroundColor: Colors.white, radius: 30.0,),
+                CircleAvatar(
+                  child: Icon(Icons.list, size: 30.0, color: Colors.lightBlueAccent,),
+                  backgroundColor: Colors.white,
+                   radius: 30.0,),
                 SizedBox(height: 10.0,),
                 WavyAnimatedTextKit(text: ['Employee(s) Dashboard'],textStyle: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold)),
                 // Text('12 Tasks', style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),),
