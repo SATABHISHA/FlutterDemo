@@ -111,7 +111,6 @@ class CustomDrawer extends StatelessWidget {
               // ...
               Navigator.pop(context);
               Navigator.pushNamed(context, AdminDashboard.id);
-              // Navigator.pop(context);
             },
           ),
           ListTile(
