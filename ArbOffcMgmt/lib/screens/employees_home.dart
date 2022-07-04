@@ -1,3 +1,4 @@
+import 'package:arb_offc/screens/hrskill/admin_dashboard.dart';
 import 'package:arb_offc/widgets/pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -101,14 +102,16 @@ class CustomDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child: Text('Drawer Header'),
+            child: Text('Arb Software India Pvt Ltd'),
           ),
           ListTile(
-            title: const Text('Item 1'),
+            title: const Text('HR Skill Management'),
             onTap: () {
               // Update the state of the app.
               // ...
               Navigator.pop(context);
+              Navigator.pushNamed(context, AdminDashboard.id);
+              // Navigator.pop(context);
             },
           ),
           ListTile(
