@@ -1,4 +1,8 @@
+import 'package:arb_offc/screens/hrskill/admin_skill_management.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../widgets/admin/reusable_dashboard_container_employee_admin.dart';
 
 class AdminDashboard extends StatelessWidget {
   // const EmployeeDashboard({Key? key}) : super(key: key);
@@ -13,39 +17,19 @@ class AdminDashboard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              height: 200,
-              width: 200,
-              child: Column(
-                children: [
-                  Icon()
-                ],
-              ),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(2.0),
-                border: Border.all(
-                    color: Color.fromRGBO(190, 190, 190, 1),
-                    width: 1),
-              ),
-
-            ),
+            ReusableDashboardContainer(dashboardOnPressed: (){
+              print('Clicked');
+              Navigator.pushNamed(context, AdminSkillManagement.id);
+            },employeeDashboardTitle: 'Skill Management'),
             SizedBox(height: 10,),
-            Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(2.0),
-                border: Border.all(
-                    color: Color.fromRGBO(190, 190, 190, 1),
-                    width: 1),
-              ),
-
-            )
+            ReusableDashboardContainer(dashboardOnPressed: (){
+              print('Clicked');
+            },employeeDashboardTitle: 'Personal Data Management',)
           ],
         ),
       ),
     );
   }
 }
+
+
