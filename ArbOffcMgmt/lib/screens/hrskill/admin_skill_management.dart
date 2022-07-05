@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/admin/reusable_rounded_button_admin_skill.dart';
+import 'admin_searching_screen1.dart';
 
 
 class AdminSkillManagement extends StatelessWidget {
@@ -30,7 +31,9 @@ class AdminSkillManagement extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              RoundedButtonAdminSkillWidget(onPressed: (){}, title: 'Add Skill Level',),
+              RoundedButtonAdminSkillWidget(onPressed: (){
+                Navigator.pushNamed(context, SearchSkillByAdmin.id);
+              }, title: 'Add Skill Level',),
               SizedBox(height: 20,),
               RoundedButtonAdminSkillWidget(onPressed: (){}, title: 'Add Skill',),
               SizedBox(height: 20,),
