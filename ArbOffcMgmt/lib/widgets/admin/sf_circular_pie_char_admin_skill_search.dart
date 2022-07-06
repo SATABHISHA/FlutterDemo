@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 
-class SfCircularPieChart extends StatelessWidget {
+class SfCircularPieChartAdminSkillSearch extends StatelessWidget {
   // const SfCircularPieChart({Key? key}) : super(key: key);
   static String department = '';
   @override
   Widget build(BuildContext context) {
-    final List<ChartData> chartData = [
-      ChartData('DotNet', 7 , Colors.red),
-      ChartData('Php', 2, Colors.grey),
-      ChartData('Mobile', 1, Colors.orangeAccent),
-      ChartData('Designer', 2, Colors.limeAccent)
+    final List<ChartDataSkillSearch> chartData = [
+      ChartDataSkillSearch('Skill_1', 1 , Colors.lightBlueAccent),
+      ChartDataSkillSearch('Skill_2', 2, Colors.lightGreenAccent),
     ];
     return Scaffold(
         body: Center(
@@ -19,14 +17,14 @@ class SfCircularPieChart extends StatelessWidget {
                 child: SfCircularChart(
                     series: <CircularSeries>[
                       // Render pie chart
-                      PieSeries<ChartData, String>(
+                      PieSeries<ChartDataSkillSearch, String>(
                           dataSource: chartData,
-                          pointColorMapper:(ChartData data,  _) => data.color,
-                          xValueMapper: (ChartData data, _) => data.x,
-                          yValueMapper: (ChartData data, _) => data.y,
+                          pointColorMapper:(ChartDataSkillSearch data,  _) => data.color,
+                          xValueMapper: (ChartDataSkillSearch data, _) => data.x,
+                          yValueMapper: (ChartDataSkillSearch data, _) => data.y,
                           dataLabelSettings: DataLabelSettings(
                             // Renders the data label
-                              isVisible: true
+                              isVisible: true,
                           ),
                           onPointTap: (ChartPointDetails details) {
                             print(details.pointIndex);
@@ -40,17 +38,11 @@ class SfCircularPieChart extends StatelessWidget {
                                       child: EmployeeDetailsScreen(departmentName: 'Designer', nameList: designerList,)),
                                 )
                             );*/
-                              SfCircularPieChart.department = 'designer';
+                              SfCircularPieChartAdminSkillSearch.department = 'skill1';
                               // Navigator.pushNamed(context, EmployeeList.id);
 
-                            }if (details.pointIndex == 0){
-                              SfCircularPieChart.department = 'dotnet';
-                              // Navigator.pushNamed(context, EmployeeList.id);
-                            }if (details.pointIndex == 2){
-                              SfCircularPieChart.department = 'mobile';
-                              // Navigator.pushNamed(context, EmployeeList.id);
-                            }if (details.pointIndex == 3){
-                              SfCircularPieChart.department = 'php';
+                            }if (details.pointIndex == 1){
+                              SfCircularPieChartAdminSkillSearch.department = 'skill2';
                               // Navigator.pushNamed(context, EmployeeList.id);
                             }
                           }
@@ -62,8 +54,8 @@ class SfCircularPieChart extends StatelessWidget {
     );
   }
 }
-class ChartData {
-  ChartData(this.x, this.y, this.color);
+class ChartDataSkillSearch {
+  ChartDataSkillSearch(this.x, this.y, this.color);
   final String x;
   final double y;
   final Color color;
