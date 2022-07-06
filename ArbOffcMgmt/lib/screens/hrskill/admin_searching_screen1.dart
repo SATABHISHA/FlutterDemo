@@ -48,6 +48,20 @@ class SearchSkillByAdmin extends StatelessWidget {
                     padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
 
                     children: [
+                      Row(
+                        children: [
+                          Container(
+
+                              child: Text('data', style: TextStyle(color: Colors.black),
+                              ),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.redAccent, width: 2.0, style: BorderStyle.solid),
+                            ),
+                            width: 200,
+                            height: 50,
+                          )
+                        ],
+                      )
 
                     ],
                   ),
