@@ -19,68 +19,77 @@ class SearchSkillByAdmin extends StatelessWidget {
       appBar: AppBar(backgroundColor: Color.fromRGBO(92, 76, 121, 1.0), title: Text('Skill Management', style: TextStyle(color: Colors.white, fontSize: 18.0),),),
       body: Stack(
           children: [
-            ListView(
-              shrinkWrap: true,
-              scrollDirection: Axis.vertical,
-              children: [
-                SizedBox(
-                  height: 500,
-                  child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
+            Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 7,
-                            child: SizedBox(
-                              height: 50,
-                              child: TextField(
-                              textAlign: TextAlign.left,
-                              onChanged: (value){},
-                              style: TextStyle(color: Colors.black),
-                              decoration: kTextFieldDecoration,
-                        ),
-                            ),
-                          ),
-                          Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){})),
-                        ],
-
-                      ),
-                    ),
-                    // RoundedButtonSearchSkillByAdminWidget(title: 'Search',onPressed: (){},),
-                    Container(
-                      height: 200,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        // reverse: true,
-                        // shrinkWrap: true,
-                        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-
-                        children: children,
-                      ),
-                    ),
-
                     Expanded(
-                      child: Container(
-                        // padding: EdgeInsets.symmetric(horizontal: 20.0),
-                        // color: Colors.white,
-                        // height: 300,
-                        /*decoration: BoxDecoration(
+                      flex: 7,
+                      child: SizedBox(
+                        height: 50,
+                        child: TextField(
+                        textAlign: TextAlign.left,
+                        onChanged: (value){},
+                        style: TextStyle(color: Colors.black),
+                        decoration: kTextFieldDecoration,
+                  ),
+                      ),
+                    ),
+                    Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){})),
+                  ],
+
+                ),
+              ),
+              // RoundedButtonSearchSkillByAdminWidget(title: 'Search',onPressed: (){},),
+              Expanded(
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  children: [
+                    Container(
+                    height: 500,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Container(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.vertical,
+                          // reverse: true,
+                          // shrinkWrap: true,
+                          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+
+                          children: children,
+                        ),
+                      ),
+
+                        Expanded(
+                          child: Container(
+                            // padding: EdgeInsets.symmetric(horizontal: 20.0),
+                            // color: Colors.white,
+                            // height: 300,
+                            /*decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
                         ),*/
-                        child: SfCircularPieChartAdminSkillSearch(),
-                      ),
-                    )
+                            child: SfCircularPieChartAdminSkillSearch(),
+                          ),
+                        )
+                      ]
+                    ),
+                  )
                   ],
+                ),
               ),
-                )
-              ],
+
+
+            ],
             ),
             Align(
               alignment: FractionalOffset.bottomCenter,
