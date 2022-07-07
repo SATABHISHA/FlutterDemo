@@ -1,9 +1,11 @@
 import 'package:arb_offc/data/admin_constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/admin/mobile_screen_admin_search_screen1.dart';
 import '../../widgets/admin/reusable_roundedbutton_search_skill_by_admin.dart';
 import '../../widgets/admin/reusable_skill_tile_result_list.dart';
 import '../../widgets/admin/sf_circular_pie_char_admin_skill_search.dart';
+import '../../widgets/admin/web_screen_admin_search_screen1.dart';
 
 class SearchSkillByAdmin extends StatelessWidget {
   // const SearchSkillByAdmin({Key? key}) : super(key: key);
@@ -12,7 +14,7 @@ class SearchSkillByAdmin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final children = <Widget>[];
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 30; i++) {
       children.add(new ListTileSkillSearchResult());
     }
     return Scaffold(
@@ -47,45 +49,7 @@ class SearchSkillByAdmin extends StatelessWidget {
               ),
               // RoundedButtonSearchSkillByAdminWidget(title: 'Search',onPressed: (){},),
               Expanded(
-                child: ListView(
-                  scrollDirection: Axis.vertical,
-                  shrinkWrap: true,
-                  children: [
-                    Container(
-                    height: 500,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Container(
-                        height: 200,
-                        child: ListView(
-                          scrollDirection: Axis.vertical,
-                          // reverse: true,
-                          // shrinkWrap: true,
-                          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-
-                          children: children,
-                        ),
-                      ),
-
-                        Expanded(
-                          child: Container(
-                            // padding: EdgeInsets.symmetric(horizontal: 20.0),
-                            // color: Colors.white,
-                            // height: 300,
-                            /*decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
-                        ),*/
-                            child: SfCircularPieChartAdminSkillSearch(),
-                          ),
-                        )
-                      ]
-                    ),
-                  )
-                  ],
-                ),
+                child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: children) : WebScreenAdminSearchScreen1(children: children),
               ),
 
 
@@ -109,4 +73,8 @@ class SearchSkillByAdmin extends StatelessWidget {
     );
   }
 }
+
+
+
+
 
