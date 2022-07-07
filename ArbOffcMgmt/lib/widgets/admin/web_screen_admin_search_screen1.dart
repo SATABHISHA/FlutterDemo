@@ -5,13 +5,16 @@ class WebScreenAdminSearchScreen1 extends StatelessWidget {
   const WebScreenAdminSearchScreen1({
     Key? key,
     required this.children,
+    required this.circularChart,
   }) : super(key: key);
 
   final List<Widget> children;
+  final Widget circularChart;
 
   @override
   Widget build(BuildContext context) {
     return ListView(
+      scrollDirection: Axis.vertical,
       children: [
         Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +46,7 @@ class WebScreenAdminSearchScreen1 extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
               ),*/
-              child: SfCircularPieChartAdminSkillSearch(),
+              child: circularChart,
             ),
           )
         ],

@@ -1,4 +1,5 @@
 import 'package:arb_offc/data/admin_constants.dart';
+import 'package:arb_offc/widgets/admin/mobile_screen_admin_search_screen1_skillset.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/admin/mobile_screen_admin_search_screen1.dart';
@@ -6,6 +7,7 @@ import '../../widgets/admin/reusable_roundedbutton_search_skill_by_admin.dart';
 import '../../widgets/admin/reusable_skill_tile_result_list.dart';
 import '../../widgets/admin/sf_circular_pie_char_admin_skill_search.dart';
 import '../../widgets/admin/web_screen_admin_search_screen1.dart';
+import '../../widgets/admin/web_screen_admin_searching1_skillset.dart';
 
 class SearchSkillByAdmin extends StatelessWidget {
   // const SearchSkillByAdmin({Key? key}) : super(key: key);
@@ -17,6 +19,8 @@ class SearchSkillByAdmin extends StatelessWidget {
     for (var i = 0; i < 30; i++) {
       children.add(new ListTileSkillSearchResult());
     }
+
+
     return Scaffold(
       appBar: AppBar(backgroundColor: Color.fromRGBO(92, 76, 121, 1.0), title: Text('Skill Management', style: TextStyle(color: Colors.white, fontSize: 18.0),),),
       body: Stack(
@@ -48,14 +52,31 @@ class SearchSkillByAdmin extends StatelessWidget {
                 ),
               ),
               // RoundedButtonSearchSkillByAdminWidget(title: 'Search',onPressed: (){},),
+
+              SizedBox(height: 10,),
+              MediaQuery.of(context).size.width < 760 ? Center(child: Text('Search Result', style: TextStyle(fontSize: 18, color: Colors.black),)) : Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text('Search Result', style: TextStyle(fontSize: 18, color: Colors.black),),
+              ),
+              MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1SkillSet() : WebScreenAdminSearchScreen1SkillSet(),
+
               Expanded(
-                child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: children) : WebScreenAdminSearchScreen1(children: children),
+                child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: children, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: children, circularChart: SfCircularPieChartAdminSkillSearch()),
               ),
 
-
+              Container(
+                margin: EdgeInsets.fromLTRB(70, 0, 70, 20),
+                height: 50,
+                width: MediaQuery.of(context).size.width,
+                child: Center(child: Text('Back', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),)),
+                decoration: BoxDecoration(
+                    color: Color.fromRGBO(217, 216 , 216, 1.0),
+                    borderRadius: BorderRadius.circular(5)
+                ),
+              )
             ],
             ),
-            Align(
+            /*Align(
               alignment: FractionalOffset.bottomCenter,
               child: Container(
                 margin: EdgeInsets.fromLTRB(70, 0, 70, 20),
@@ -67,7 +88,7 @@ class SearchSkillByAdmin extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5)
                 ),
               ),
-            )
+            )*/
           ],
       ),
     );

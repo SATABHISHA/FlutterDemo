@@ -8,7 +8,7 @@ class ListTileSkillSearchResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+      padding: const EdgeInsets.fromLTRB(30, 0, 30, 10),
       child: Row(
         children: [
           Expanded(

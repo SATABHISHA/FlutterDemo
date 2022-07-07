@@ -5,9 +5,11 @@ class MobileScreenAdminSearchScreen1 extends StatelessWidget {
   const MobileScreenAdminSearchScreen1({
     Key? key,
     required this.children,
+    required this.circularChart
   }) : super(key: key);
 
   final List<Widget> children;
+  final Widget circularChart;
 
   @override
   Widget build(BuildContext context) {
@@ -16,24 +18,28 @@ class MobileScreenAdminSearchScreen1 extends StatelessWidget {
       shrinkWrap: true,
       children: [
         Container(
-          height: 500,
+          height: (MediaQuery.of(context).size.height - 250),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Container(
-                  height: 200,
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    // reverse: true,
-                    // shrinkWrap: true,
-                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                Expanded(
+                  flex: 4,
+                  child: Container(
+                    // height: 200,
+                    child: ListView(
+                      scrollDirection: Axis.vertical,
+                      // reverse: true,
+                      // shrinkWrap: true,
+                      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
 
-                    children: children,
+                      children: children,
+                    ),
                   ),
                 ),
 
                 Expanded(
+                  flex: 6,
                   child: Container(
                     // padding: EdgeInsets.symmetric(horizontal: 20.0),
                     // color: Colors.white,
@@ -42,7 +48,7 @@ class MobileScreenAdminSearchScreen1 extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
             ),*/
-                    child: SfCircularPieChartAdminSkillSearch(),
+                    child: circularChart,
                   ),
                 )
               ]
