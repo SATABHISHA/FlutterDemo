@@ -10,9 +10,70 @@ import '../../widgets/admin/sf_circular_pie_char_admin_skill_search.dart';
 import '../../widgets/admin/web_screen_admin_search_screen1.dart';
 import '../../widgets/admin/web_screen_admin_searching1_skillset.dart';
 
-class SearchSkillByAdmin extends StatelessWidget {
+final _firestore = FirebaseFirestore.instance;
+class SearchSkillByAdmin extends StatefulWidget {
   // const SearchSkillByAdmin({Key? key}) : super(key: key);
   static String id = 'SearchSkillByAdmin';
+
+  @override
+  State<SearchSkillByAdmin> createState() => _SearchSkillByAdminState();
+}
+
+class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
+  void messagesStream() async {
+    await for( var snapshot in _firestore.collection('EmpDetails').snapshots()){
+      for (var message in snapshot.docs){
+        print(message.data());
+      }
+    }
+  }
+
+   void  getMessageStream() {
+     StreamBuilder(
+         stream: _firestore.collection('EmpDetails').snapshots(),
+         builder: (context, snapshot) {
+           if (!snapshot.hasData) {
+             return new Text("Loading");
+           }
+           var userDocument = snapshot.data;
+           print(userDocument);
+           return new Text('Success');
+           // return new Text(userDocument["name"]);
+         }
+     );
+   /* StreamBuilder<QuerySnapshot> (
+      builder: (context, snapshot) {
+        if(!snapshot.hasData){
+           return Center(
+            child: CircularProgressIndicator(backgroundColor: Colors.lightBlueAccent,),
+          );
+        }
+        if (snapshot.hasData){
+          final EmpDetails = snapshot.data?.docs;
+          // List<MessageBuble> messageWidgets = [];
+          for (var EmpDetails in EmpDetails!){
+            *//* final messageText = message['text'];
+            final messageSender = message['sender'];
+
+            final currentUser = loggedInUser.email;
+
+
+            final messageBubbles = MessageBuble(sender: messageSender,text: messageText, isMe: currentUser == messageSender,);
+            messageWidgets.add(messageBubbles);*//*
+            print(EmpDetails);
+          }
+          *//* return Expanded(
+            child: ListView(
+              reverse: true,
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+              children: messageWidgets,
+            ),
+          );*//*
+        }
+      },
+      stream: _firestore.collection('EmpDetails').snapshots(),
+    );*/
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +83,7 @@ class SearchSkillByAdmin extends StatelessWidget {
     }
 
 
+    // getMessageStream();
     return Scaffold(
       appBar: AppBar(backgroundColor: Color.fromRGBO(92, 76, 121, 1.0), title: Text('Skill Management', style: TextStyle(color: Colors.white, fontSize: 18.0),),),
       body: Stack(
@@ -96,7 +158,47 @@ class SearchSkillByAdmin extends StatelessWidget {
   }
 }
 
+//---Firebase data fetching
 
+/*class MessagesStream extends StatelessWidget {
+  // const MessagesStream({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      builder: (context, snapshot){
+        if(!snapshot.hasData){
+          return Center(
+            child: CircularProgressIndicator(backgroundColor: Colors.lightBlueAccent,),
+          );
+        }
+        if (snapshot.hasData){
+          final EmpDetails = snapshot.data?.docs;
+          // List<MessageBuble> messageWidgets = [];
+          for (var EmpDetails in EmpDetails!){
+           *//* final messageText = message['text'];
+            final messageSender = message['sender'];
+
+            final currentUser = loggedInUser.email;
+
+
+            final messageBubbles = MessageBuble(sender: messageSender,text: messageText, isMe: currentUser == messageSender,);
+            messageWidgets.add(messageBubbles);*//*
+            print(EmpDetails);
+          }
+         *//* return Expanded(
+            child: ListView(
+              reverse: true,
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+              children: messageWidgets,
+            ),
+          );*//*
+        }
+      },
+      stream: _firestore.collection('EmpDetails').snapshots(),
+    );
+  }
+}*/
 
 
 
