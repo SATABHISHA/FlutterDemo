@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "224297668250",
+    "project_id": "arboffcdemo",
+    "storage_bucket": "arboffcdemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224297668250:android:f0b4fea7096aa9b4b19923",
+        "android_client_info": {
+          "package_name": "org.arb.offc.mgnt.arb_offc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224297668250-uaudngol541lo9itmrc8tdvkeeihlrvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8PZq0Et5vXHkOC-cDAro900f9AgK5ye0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224297668250-uaudngol541lo9itmrc8tdvkeeihlrvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
