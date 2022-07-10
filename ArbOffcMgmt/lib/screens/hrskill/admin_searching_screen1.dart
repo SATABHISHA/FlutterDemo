@@ -20,6 +20,7 @@ class SearchSkillByAdmin extends StatefulWidget {
 }
 
 class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
+
   void messagesStream() async {
     await for( var snapshot in _firestore.collection('EmpDetails').snapshots()){
       for (var message in snapshot.docs){
@@ -32,6 +33,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
      StreamBuilder(
          stream: _firestore.collection('EmpDetails').snapshots(),
          builder: (context, snapshot) {
+           print('Hello testing');
            if (!snapshot.hasData) {
              return new Text("Loading");
            }
@@ -88,6 +90,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
       appBar: AppBar(backgroundColor: Color.fromRGBO(92, 76, 121, 1.0), title: Text('Skill Management', style: TextStyle(color: Colors.white, fontSize: 18.0),),),
       body: Stack(
           children: [
+            GetUserName(documentId: '1q6508s5mW34FJodP01E'),
             Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -202,3 +205,38 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
 
 
 
+class GetUserName extends StatelessWidget {
+  final String documentId;
+
+  GetUserName({required this.documentId});
+
+  @override
+  Widget build(BuildContext context) {
+    CollectionReference users = FirebaseFirestore.instance.collection('EmpDetails');
+
+    return FutureBuilder<DocumentSnapshot>(
+      future: users.doc(documentId).get(),
+      builder:
+          (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
+
+        if (snapshot.hasError) {
+          print(snapshot.error);
+          return Text("Something went wrong");
+        }
+
+        if (snapshot.hasData && !snapshot.data!.exists) {
+          return Text("Document does not exist");
+        }
+
+        if (snapshot.connectionState == ConnectionState.done) {
+          Map<String, dynamic> data = snapshot.data!.data() as Map<String, dynamic>;
+          // return Text("Full Name: ${data['full_name']} ${data['last_name']}");
+          print("Name: ${data['Name']}");
+          return Text("Name: ${data['Name']}");
+        }
+
+        return Text("loading");
+      },
+    );
+  }
+}
