@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ListTileSkillSearchResult extends StatelessWidget {
-  const ListTileSkillSearchResult({
+ /* const ListTileSkillSearchResult({
     Key? key,
-  }) : super(key: key);
+  }) : super(key: key);*/
+  final String skill;
+  ListTileSkillSearchResult({required this.skill});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class ListTileSkillSearchResult extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
-                  child: Text('Skill', style: TextStyle(color: Colors.black,),
+                  child: Text('$skill', style: TextStyle(color: Colors.black,),
                   ),
                 ),
               ),

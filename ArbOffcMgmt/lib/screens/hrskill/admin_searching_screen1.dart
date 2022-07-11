@@ -79,13 +79,13 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
 
   @override
   Widget build(BuildContext context) {
-    final children = <Widget>[];
+    /*final children = <Widget>[];
     for (var i = 0; i < 30; i++) {
       children.add(new ListTileSkillSearchResult());
-    }
+    }*/
 
-
-    getMessageStream();
+messagesStream();
+    // getMessageStream();
     return Scaffold(
       appBar: AppBar(backgroundColor: Color.fromRGBO(92, 76, 121, 1.0), title: Text('Skill Management', style: TextStyle(color: Colors.white, fontSize: 18.0),),),
       body: Stack(
@@ -126,9 +126,10 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
               ),
               MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1SkillSet() : WebScreenAdminSearchScreen1SkillSet(),
 
-              Expanded(
-                child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: children, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: children, circularChart: SfCircularPieChartAdminSkillSearch()),
-              ),
+             /* Expanded(
+                child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: DepartmentDetails(), circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: children, circularChart: SfCircularPieChartAdminSkillSearch()),
+              ),*/ //--commented...(it was for testing purpose)
+              DepartmentDetails(),
 
               Container(
                 margin: EdgeInsets.fromLTRB(70, 0, 70, 20),
@@ -163,7 +164,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
 
 //---Firebase data fetching
 
-/*class MessagesStream extends StatelessWidget {
+class DepartmentDetails extends StatelessWidget {
   // const MessagesStream({Key? key}) : super(key: key);
 
   @override
@@ -176,34 +177,28 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
           );
         }
         if (snapshot.hasData){
-          final EmpDetails = snapshot.data?.docs;
-          // List<MessageBuble> messageWidgets = [];
-          for (var EmpDetails in EmpDetails!){
-           *//* final messageText = message['text'];
-            final messageSender = message['sender'];
+          final data = snapshot.data!.docs;
+          final
+          List<ListTileSkillSearchResult> skillWidgetsList = [];
+          for (var skills in data){
+            final skill = skills['Skill'];
 
-            final currentUser = loggedInUser.email;
+            // final currentUser = loggedInUser.email;
 
 
-            final messageBubbles = MessageBuble(sender: messageSender,text: messageText, isMe: currentUser == messageSender,);
-            messageWidgets.add(messageBubbles);*//*
-            print(EmpDetails);
+            final skillWidgets = ListTileSkillSearchResult(skill: skill,);
+            skillWidgetsList.add(skillWidgets);
           }
-         *//* return Expanded(
-            child: ListView(
-              reverse: true,
-              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-              children: messageWidgets,
-            ),
-          );*//*
+          return Expanded(
+            child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: skillWidgetsList, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: skillWidgetsList, circularChart: SfCircularPieChartAdminSkillSearch()),
+          );
         }
+        return Text('No data');
       },
       stream: _firestore.collection('EmpDetails').snapshots(),
     );
   }
-}*/
-
-
+}
 
 class GetUserName extends StatelessWidget {
   final String documentId;

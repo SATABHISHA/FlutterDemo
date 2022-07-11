@@ -16,7 +16,7 @@ class WebScreenAdminSearchScreen1SkillSet extends StatelessWidget {
           flex: 6,
           child: Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
-            child: ListTileSkillSearchResult(),
+            child: ListTileSkillSearchResult(skill: '',),
           ),
         ),
 
