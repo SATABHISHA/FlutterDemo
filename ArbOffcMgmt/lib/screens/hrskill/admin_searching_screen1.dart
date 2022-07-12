@@ -21,7 +21,6 @@ class SearchSkillByAdmin extends StatefulWidget {
 }
 
 class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
-
   void messagesStream() async {
     await for( var snapshot in _firestore.collection('EmpDetails').snapshots()){
       for (var message in snapshot.docs){
@@ -44,42 +43,12 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
            // return new Text(userDocument["name"]);
          }
      );
-   /* StreamBuilder<QuerySnapshot> (
-      builder: (context, snapshot) {
-        if(!snapshot.hasData){
-           return Center(
-            child: CircularProgressIndicator(backgroundColor: Colors.lightBlueAccent,),
-          );
-        }
-        if (snapshot.hasData){
-          final EmpDetails = snapshot.data?.docs;
-          // List<MessageBuble> messageWidgets = [];
-          for (var EmpDetails in EmpDetails!){
-            *//* final messageText = message['text'];
-            final messageSender = message['sender'];
-
-            final currentUser = loggedInUser.email;
-
-
-            final messageBubbles = MessageBuble(sender: messageSender,text: messageText, isMe: currentUser == messageSender,);
-            messageWidgets.add(messageBubbles);*//*
-            print(EmpDetails);
-          }
-          *//* return Expanded(
-            child: ListView(
-              reverse: true,
-              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-              children: messageWidgets,
-            ),
-          );*//*
-        }
-      },
-      stream: _firestore.collection('EmpDetails').snapshots(),
-    );*/
   }
 
   @override
   Widget build(BuildContext context) {
+    String searchText = '';
+    var searchTextSplitString;
     /*final children = <Widget>[];
     for (var i = 0; i < 30; i++) {
       children.add(new ListTileSkillSearchResult());
@@ -107,7 +76,9 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                         height: 50,
                         child: TextField(
                         textAlign: TextAlign.left,
-                        onChanged: (value){},
+                        onChanged: (value){
+                          searchText = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         decoration: kTextFieldDecoration,
                   ),
@@ -116,6 +87,8 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                     Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){
                       setState((){
                         searchSkillTrueFalse = true;
+                        searchTextSplitString = searchText.split(',');
+                        print('values-=>$searchTextSplitString');
                       });
 
                     })),
