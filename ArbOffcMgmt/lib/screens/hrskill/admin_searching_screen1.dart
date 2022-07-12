@@ -1,4 +1,5 @@
 import 'package:arb_offc/data/admin_constants.dart';
+import 'package:arb_offc/data/employee_details.dart';
 import 'package:arb_offc/widgets/admin/mobile_screen_admin_search_screen1_skillset.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -145,7 +146,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
 }
 
 //---Firebase data fetching
-var count = 0;
+
 class DepartmentDetails extends StatelessWidget {
   // const MessagesStream({Key? key}) : super(key: key);
   // final bool searchBtnClickTrueFalse;
@@ -155,7 +156,9 @@ class DepartmentDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    // var datacount = 0;
+    var count = 0;
+    // searchTextResult = [];
     return StreamBuilder<QuerySnapshot>(
       builder: (context, snapshot){
         if(!snapshot.hasData){
@@ -165,8 +168,56 @@ class DepartmentDetails extends StatelessWidget {
         }
         if (snapshot.hasData){
           final data = snapshot.data!.docs;
-          final
-          List<ListTileSkillSearchResult> skillWidgetsList = [];
+          // final List<EmployeeDetails> emp_details_list = [];
+
+        /*  List<String> skillsSearchList = <String>[];
+          for(var search in searchTextResult){
+            skillsSearchList.add(search);
+          }
+
+          for(int i=0; i<skillsSearchList.length; i++){
+            var datacount = 0;
+            for(int j=i; j<data.length; j++){
+              print('skilltestingtrial-=>${data[j]['Skill'].toString()}');
+              if(skillsSearchList[i].toString() == data[j]['Skill']){
+                datacount = datacount+1;
+                print('Found-=>${data[j]['Skill']}');
+              }
+
+            }
+            print('hello-=>$datacount');
+            print('testingDemo-=>${skillsSearchList.toString()}');
+            emp_details_list.add(new EmployeeDetails(Skill: skillsSearchList[i].toString(), count: datacount));
+          }*/
+
+
+          List<String> skillName = <String>[];
+          for(var searchSkill in data){
+            skillName.add(searchSkill['Skill']);
+          }
+
+
+          List<EmployeeDetails> emp_details_list = [];
+          for (var searchSkill in searchTextResult){
+            var countSkill = 0;
+            print('SkillTestingAgain-=>$searchSkill');
+            
+            for(var skills in data){
+              final skill = skills['Skill'];
+              print('skilltesting-=>$skill');
+              if(searchSkill == skills['Skill']){
+                countSkill = countSkill+1;
+                print('Success ${skills['Skill']}');
+              }
+            }
+            print('DataCount-=>$countSkill');
+
+            emp_details_list.add(new EmployeeDetails(Skill: searchSkill, count: countSkill));
+            // count = 0;
+            // skillWidgetsList.add(skillWidgets);
+          }
+
+          /*final List<ListTileSkillSearchResult> skillWidgetsList = [];
           for (var searchSkill in searchTextResult){
             for(var skills in data){
               final skill = skills['Skill'];
@@ -178,7 +229,7 @@ class DepartmentDetails extends StatelessWidget {
             final skillWidgets = ListTileSkillSearchResult(skill: searchSkill, count: count,);
             skillWidgetsList.add(skillWidgets);
           }
-          print('testvalues-=>$searchTextResult');
+          print('testvalues-=>$searchTextResult');*/
           /*for (var skills in data){
             final skill = skills['Skill'];
 
@@ -189,12 +240,13 @@ class DepartmentDetails extends StatelessWidget {
             skillWidgetsList.add(skillWidgets);
           }*/
           return Expanded(
-            child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: skillWidgetsList, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: skillWidgetsList, circularChart: SfCircularPieChartAdminSkillSearch()),
+            child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: emp_details_list, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: emp_details_list, circularChart: SfCircularPieChartAdminSkillSearch()),
           );
         }
         return Text('No data');
       },
       stream: _firestore.collection('EmpDetails').snapshots(),
+      // stream: _firestore.collection('EmpDetails').where('Skill', whereIn: ['Mobile', 'Dot Net', 'Designer']).snapshots(),
     );
   }
 }
