@@ -11,6 +11,7 @@ import '../../widgets/admin/web_screen_admin_search_screen1.dart';
 import '../../widgets/admin/web_screen_admin_searching1_skillset.dart';
 
 final _firestore = FirebaseFirestore.instance;
+bool searchSkillTrueFalse = false;
 class SearchSkillByAdmin extends StatefulWidget {
   // const SearchSkillByAdmin({Key? key}) : super(key: key);
   static String id = 'SearchSkillByAdmin';
@@ -84,13 +85,13 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
       children.add(new ListTileSkillSearchResult());
     }*/
 
-messagesStream();
+     messagesStream();
     // getMessageStream();
     return Scaffold(
       appBar: AppBar(backgroundColor: Color.fromRGBO(92, 76, 121, 1.0), title: Text('Skill Management', style: TextStyle(color: Colors.white, fontSize: 18.0),),),
       body: Stack(
           children: [
-            GetUserName(documentId: '1q6508s5mW34FJodP01E'),
+            // GetUserName(documentId: '1q6508s5mW34FJodP01E'),
             Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -112,7 +113,12 @@ messagesStream();
                   ),
                       ),
                     ),
-                    Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){})),
+                    Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){
+                      setState((){
+                        searchSkillTrueFalse = true;
+                      });
+
+                    })),
                   ],
 
                 ),
@@ -129,7 +135,10 @@ messagesStream();
              /* Expanded(
                 child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: DepartmentDetails(), circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: children, circularChart: SfCircularPieChartAdminSkillSearch()),
               ),*/ //--commented...(it was for testing purpose)
-              DepartmentDetails(),
+
+
+              // DepartmentDetails(),
+              searchSkillTrueFalse==true? DepartmentDetails(): Text(''),
 
               Container(
                 margin: EdgeInsets.fromLTRB(70, 0, 70, 20),
@@ -166,6 +175,8 @@ messagesStream();
 
 class DepartmentDetails extends StatelessWidget {
   // const MessagesStream({Key? key}) : super(key: key);
+  // final bool searchBtnClickTrueFalse;
+  // DepartmentDetails(this.searchBtnClickTrueFalse);
 
   @override
   Widget build(BuildContext context) {
