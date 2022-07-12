@@ -5,7 +5,8 @@ class ListTileSkillSearchResult extends StatelessWidget {
     Key? key,
   }) : super(key: key);*/
   final String skill;
-  ListTileSkillSearchResult({required this.skill});
+  var count;
+  ListTileSkillSearchResult({required this.skill, this.count});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class ListTileSkillSearchResult extends StatelessWidget {
             flex: 1,
             child: Container(
               child: Center(
-                child: Text('25', style: TextStyle(color: Colors.black),
+                child: Text('$count', style: TextStyle(color: Colors.black),
                 ),
               ),
               decoration: BoxDecoration(

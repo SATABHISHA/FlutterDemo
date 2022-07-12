@@ -12,6 +12,7 @@ import '../../widgets/admin/web_screen_admin_searching1_skillset.dart';
 
 final _firestore = FirebaseFirestore.instance;
 bool searchSkillTrueFalse = false;
+var searchTextSplitString;
 class SearchSkillByAdmin extends StatefulWidget {
   // const SearchSkillByAdmin({Key? key}) : super(key: key);
   static String id = 'SearchSkillByAdmin';
@@ -48,7 +49,6 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
   @override
   Widget build(BuildContext context) {
     String searchText = '';
-    var searchTextSplitString;
     /*final children = <Widget>[];
     for (var i = 0; i < 30; i++) {
       children.add(new ListTileSkillSearchResult());
@@ -111,7 +111,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
 
 
               // DepartmentDetails(),
-              searchSkillTrueFalse==true? DepartmentDetails(): Text(''),
+              searchSkillTrueFalse==true? DepartmentDetails(searchTextResult: searchTextSplitString,): Text(''),
 
               Container(
                 margin: EdgeInsets.fromLTRB(70, 0, 70, 20),
@@ -145,14 +145,17 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
 }
 
 //---Firebase data fetching
-
+var count = 0;
 class DepartmentDetails extends StatelessWidget {
   // const MessagesStream({Key? key}) : super(key: key);
   // final bool searchBtnClickTrueFalse;
   // DepartmentDetails(this.searchBtnClickTrueFalse);
+  var searchTextResult;
+  DepartmentDetails({required this.searchTextResult});
 
   @override
   Widget build(BuildContext context) {
+
     return StreamBuilder<QuerySnapshot>(
       builder: (context, snapshot){
         if(!snapshot.hasData){
@@ -164,7 +167,19 @@ class DepartmentDetails extends StatelessWidget {
           final data = snapshot.data!.docs;
           final
           List<ListTileSkillSearchResult> skillWidgetsList = [];
-          for (var skills in data){
+          for (var searchSkill in searchTextResult){
+            for(var skills in data){
+              final skill = skills['Skill'];
+              if(searchSkill == skill){
+                count ++;
+              }
+            }
+            print('DataCount-=>$count');
+            final skillWidgets = ListTileSkillSearchResult(skill: searchSkill, count: count,);
+            skillWidgetsList.add(skillWidgets);
+          }
+          print('testvalues-=>$searchTextResult');
+          /*for (var skills in data){
             final skill = skills['Skill'];
 
             // final currentUser = loggedInUser.email;
@@ -172,7 +187,7 @@ class DepartmentDetails extends StatelessWidget {
 
             final skillWidgets = ListTileSkillSearchResult(skill: skill,);
             skillWidgetsList.add(skillWidgets);
-          }
+          }*/
           return Expanded(
             child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: skillWidgetsList, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: skillWidgetsList, circularChart: SfCircularPieChartAdminSkillSearch()),
           );
