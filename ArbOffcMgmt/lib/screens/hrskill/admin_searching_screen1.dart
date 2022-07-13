@@ -16,6 +16,7 @@ import 'package:arb_offc/model/employee_skill_details.dart';
 
 final _firestore = FirebaseFirestore.instance;
 bool searchSkillTrueFalse = false;
+bool searchSkillTotalTrueFalse = false;
 var searchTextSplitString;
 List<EmployeeSkillDetailsModelClass> employeeSkillDetailsModelClassList = [];
 class SearchSkillByAdmin extends StatefulWidget {
@@ -96,6 +97,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                     Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){
                       setState((){
                         searchSkillTrueFalse = true;
+                        searchSkillTotalTrueFalse = true;
                         searchTextSplitString = searchText.split(',');
                         searchTextSplitString.toString().trim();
                         _textSearchController.clear();
@@ -113,9 +115,9 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                 padding: const EdgeInsets.only(left: 20),
                 child: Text('Search Result', style: TextStyle(fontSize: 18, color: Colors.black),),
               ),
-              MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1SkillSet() : WebScreenAdminSearchScreen1SkillSet(),
-
-             /* Expanded(
+              // MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1SkillSet(skill: '',count: ,) : WebScreenAdminSearchScreen1SkillSet(),
+              searchSkillTotalTrueFalse==true? EmployeesTotalSkillSearch(searchTextResult: searchTextSplitString,): Text(''),
+              /* Expanded(
                 child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: DepartmentDetails(), circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: children, circularChart: SfCircularPieChartAdminSkillSearch()),
               ),*/ //--commented...(it was for testing purpose)
 
@@ -154,12 +156,67 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
   }
 }
 
+class EmployeesTotalSkillSearch extends StatelessWidget {
+  // const EmployeesTotalSkillSearch({Key? key}) : super(key: key);
+  var searchTextResult;
+  EmployeesTotalSkillSearch({required this.searchTextResult});
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      builder: (context, snapshot){
+        if(!snapshot.hasData){
+          return Center(
+            child: CircularProgressIndicator(backgroundColor: Colors.lightBlueAccent,),
+          );
+        }
+        if (snapshot.hasData){
+          final data = snapshot.data!.docs;
+
+          var skillsEmployee = '';
+          var count = 0;
+          var loopCount = 0;
+          for (var searchSkill in searchTextResult){
+            var skill;
+            for(var skills in data){
+              // skill = skills['Skill'];
+              if(searchSkill.toString().trim().toLowerCase() == skills['Skill'].toString().toLowerCase()){
+                count = count+1;
+                skill = skills['Skill'];
+              }
+            }
+            if(loopCount == 0){
+              skillsEmployee = skill;
+            }else {
+              skillsEmployee = skillsEmployee + ', ' + skill;
+            }
+            loopCount ++;
+
+          }
+          skillsEmployee.replaceFirst(RegExp(','),'',1);
+
+          return MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1SkillSet(skill: skillsEmployee, count: count) : WebScreenAdminSearchScreen1SkillSet(skill: skillsEmployee, count: count);
+        }
+        return Text('');
+      },
+      stream: _firestore.collection('EmpDetails').snapshots(),
+      // stream: _firestore.collection('EmpDetails').where('Skill', whereIn: ['Mobile', 'Dot Net', 'Designer']).snapshots(),
+    );
+
+
+      // MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1SkillSet(skill: skillsEmployee,count: DepartmentDetails.skillNamesList.length) : WebScreenAdminSearchScreen1SkillSet(skill: skillsEmployee,count: DepartmentDetails.skillNamesList.length);
+  }
+}
+
+
 //---Firebase data fetching
 
 class DepartmentDetails extends StatelessWidget {
   // const MessagesStream({Key? key}) : super(key: key);
   // final bool searchBtnClickTrueFalse;
   // DepartmentDetails(this.searchBtnClickTrueFalse);
+  static List<String> skillNamesList = <String>[];
+  static bool skillSearchTotalTrueFalse = false;
   var searchTextResult;
   DepartmentDetails({required this.searchTextResult});
 
@@ -178,10 +235,10 @@ class DepartmentDetails extends StatelessWidget {
         if (snapshot.hasData){
           final data = snapshot.data!.docs;
 
-          List<String> skillName = <String>[];
           for(var searchSkill in data){
-            skillName.add(searchSkill['Skill']);
+            skillNamesList.add(searchSkill['Skill']);
           }
+          skillSearchTotalTrueFalse = true;
 
           List<EmployeeDetails> emp_details_list = [];
           for (var searchSkill in searchTextResult){
@@ -207,7 +264,7 @@ class DepartmentDetails extends StatelessWidget {
             child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: emp_details_list, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: emp_details_list, circularChart: SfCircularPieChartAdminSkillSearch()),
           );
         }
-        return Text('No data');
+        return Text('');
       },
       stream: _firestore.collection('EmpDetails').snapshots(),
       // stream: _firestore.collection('EmpDetails').where('Skill', whereIn: ['Mobile', 'Dot Net', 'Designer']).snapshots(),
@@ -215,6 +272,7 @@ class DepartmentDetails extends StatelessWidget {
   }
 }
 
+/*
 class GetUserName extends StatelessWidget {
   final String documentId;
 
@@ -249,4 +307,4 @@ class GetUserName extends StatelessWidget {
       },
     );
   }
-}
+}*/

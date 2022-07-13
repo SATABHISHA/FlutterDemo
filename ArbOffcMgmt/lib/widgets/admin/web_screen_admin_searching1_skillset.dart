@@ -2,9 +2,14 @@ import 'package:arb_offc/widgets/admin/reusable_skill_tile_result_list.dart';
 import 'package:flutter/material.dart';
 
 class WebScreenAdminSearchScreen1SkillSet extends StatelessWidget {
-  const WebScreenAdminSearchScreen1SkillSet({
+  /*const WebScreenAdminSearchScreen1SkillSet({
     Key? key,
-  }) : super(key: key);
+  }) : super(key: key);*/
+  var count;
+  String skill;
+
+  WebScreenAdminSearchScreen1SkillSet({required this.skill, required this.count});
+
 
 
   @override
@@ -16,7 +21,7 @@ class WebScreenAdminSearchScreen1SkillSet extends StatelessWidget {
           flex: 6,
           child: Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
-            child: ListTileSkillSearchResult(skill: '',),
+            child: ListTileSkillSearchResult(skill: skill, count: count),
           ),
         ),
 
