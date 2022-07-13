@@ -55,6 +55,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
   @override
   Widget build(BuildContext context) {
     String searchText = '';
+    var _textSearchController = TextEditingController();
     /*final children = <Widget>[];
     for (var i = 0; i < 30; i++) {
       children.add(new ListTileSkillSearchResult());
@@ -83,6 +84,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                         height: 50,
                         child: TextField(
                         textAlign: TextAlign.left,
+                        controller: _textSearchController,
                         onChanged: (value){
                           searchText = value;
                         },
@@ -95,6 +97,8 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                       setState((){
                         searchSkillTrueFalse = true;
                         searchTextSplitString = searchText.split(',');
+                        searchTextSplitString.toString().trim();
+                        _textSearchController.clear();
                       });
 
                     })),
@@ -187,7 +191,7 @@ class DepartmentDetails extends StatelessWidget {
             for(var skills in data){
               final skill = skills['Skill'];
               print('skilltesting-=>$skill');
-              if(searchSkill == skills['Skill']){
+              if(searchSkill.toString().trim().toLowerCase() == skills['Skill'].toString().toLowerCase()){
                 countSkill = countSkill+1;
                 print('Success ${skills['Skill']}');
               }
