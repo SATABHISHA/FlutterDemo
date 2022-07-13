@@ -1,3 +1,5 @@
+// import 'dart:ffi';
+
 import 'package:arb_offc/data/admin_constants.dart';
 import 'package:arb_offc/data/employee_details.dart';
 import 'package:arb_offc/widgets/admin/mobile_screen_admin_search_screen1_skillset.dart';
@@ -10,10 +12,12 @@ import '../../widgets/admin/reusable_skill_tile_result_list.dart';
 import '../../widgets/admin/sf_circular_pie_char_admin_skill_search.dart';
 import '../../widgets/admin/web_screen_admin_search_screen1.dart';
 import '../../widgets/admin/web_screen_admin_searching1_skillset.dart';
+import 'package:arb_offc/model/employee_skill_details.dart';
 
 final _firestore = FirebaseFirestore.instance;
 bool searchSkillTrueFalse = false;
 var searchTextSplitString;
+List<EmployeeSkillDetailsModelClass> employeeSkillDetailsModelClassList = [];
 class SearchSkillByAdmin extends StatefulWidget {
   // const SearchSkillByAdmin({Key? key}) : super(key: key);
   static String id = 'SearchSkillByAdmin';
@@ -21,6 +25,7 @@ class SearchSkillByAdmin extends StatefulWidget {
   @override
   State<SearchSkillByAdmin> createState() => _SearchSkillByAdminState();
 }
+
 
 class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
   void messagesStream() async {
@@ -46,7 +51,61 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
          }
      );
   }
+  List<String> demolist = [];
+void getDemoEmpData(){
+     /*for(var skills in searchSkill){
+      getEmpDetailsTemp(skills);
+    }*/
+  demolist.add('Dot Net');
+  demolist.add('Php');
+  demolist.add('Mobile');
+  demolist.add('Designer');
 
+     for(int i=0; i<demolist.length; i++){
+       getEmpDetailsTemp(demolist[i].toString());
+     }
+}
+
+  void getEmpDetailsTemp(var searchText) async {
+    final querySnapshot = await FirebaseFirestore.instance
+        .collection('EmpDetails')
+        .where('Skill', isEqualTo: searchText)
+        .get();
+
+    employeeSkillDetailsModelClassList.add(EmployeeSkillDetailsModelClass(skill: searchText, count: querySnapshot.docs.length));
+    print('New Pattern Skill-=>$searchText and countNew-=>${querySnapshot.docs.length}');
+
+      /*for (var doc in querySnapshot.docs) {
+        employeeSkillDetailsModelClassList.add(EmployeeSkillDetailsModelClass(skill: doc.get('Skill')));
+        *//*if (searchSkill == doc.get('Skill')) {
+          count++;
+        }*//*
+       }*/
+      /*for(var skills in employeeSkillDetailsModelClassList){
+        var count  = 0;
+        print('ListTesting-=>${skills.skill}');
+
+        for(var sT in searchText){
+          if(skills.skill == sT){
+            count ++;
+          }
+          // continue;
+        }
+        print('testFirebasedemo skill-=>${skills.skill} and countdemo-=> $count');
+
+      }*/
+    // print('DemoSkill-=>$searchSkill and demoCount-=>$count');
+    /*for (var doc in querySnapshot.docs) {
+      // Getting data directly
+      String skills = doc.get('Skill');
+      print('DemoSkills-=>$skills');*/
+
+
+    // Getting data from map
+    /* Map<String, dynamic> data = doc.data();
+      int age = data['age'];
+  }*/
+  }
   @override
   Widget build(BuildContext context) {
     String searchText = '';
@@ -57,6 +116,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
 
      messagesStream();
     // getMessageStream();
+    // getEmpDetailsTemp();
     return Scaffold(
       appBar: AppBar(backgroundColor: Color.fromRGBO(92, 76, 121, 1.0), title: Text('Skill Management', style: TextStyle(color: Colors.white, fontSize: 18.0),),),
       body: Stack(
@@ -89,7 +149,11 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                       setState((){
                         searchSkillTrueFalse = true;
                         searchTextSplitString = searchText.split(',');
-                        print('values-=>$searchTextSplitString');
+                        // print('values-=>$searchTextSplitString');
+                        // getEmpDetailsTemp(searchTextSplitString);
+                        // getDemoEmpData(searchTextSplitString);
+                        getDemoEmpData();
+                        // getEmpDetailsTemp(searchTextSplitString);
                       });
 
                     })),
