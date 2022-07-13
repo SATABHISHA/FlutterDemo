@@ -51,61 +51,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
          }
      );
   }
-  List<String> demolist = [];
-void getDemoEmpData(){
-     /*for(var skills in searchSkill){
-      getEmpDetailsTemp(skills);
-    }*/
-  demolist.add('Dot Net');
-  demolist.add('Php');
-  demolist.add('Mobile');
-  demolist.add('Designer');
 
-     for(int i=0; i<demolist.length; i++){
-       getEmpDetailsTemp(demolist[i].toString());
-     }
-}
-
-  void getEmpDetailsTemp(var searchText) async {
-    final querySnapshot = await FirebaseFirestore.instance
-        .collection('EmpDetails')
-        .where('Skill', isEqualTo: searchText)
-        .get();
-
-    employeeSkillDetailsModelClassList.add(EmployeeSkillDetailsModelClass(skill: searchText, count: querySnapshot.docs.length));
-    print('New Pattern Skill-=>$searchText and countNew-=>${querySnapshot.docs.length}');
-
-      /*for (var doc in querySnapshot.docs) {
-        employeeSkillDetailsModelClassList.add(EmployeeSkillDetailsModelClass(skill: doc.get('Skill')));
-        *//*if (searchSkill == doc.get('Skill')) {
-          count++;
-        }*//*
-       }*/
-      /*for(var skills in employeeSkillDetailsModelClassList){
-        var count  = 0;
-        print('ListTesting-=>${skills.skill}');
-
-        for(var sT in searchText){
-          if(skills.skill == sT){
-            count ++;
-          }
-          // continue;
-        }
-        print('testFirebasedemo skill-=>${skills.skill} and countdemo-=> $count');
-
-      }*/
-    // print('DemoSkill-=>$searchSkill and demoCount-=>$count');
-    /*for (var doc in querySnapshot.docs) {
-      // Getting data directly
-      String skills = doc.get('Skill');
-      print('DemoSkills-=>$skills');*/
-
-
-    // Getting data from map
-    /* Map<String, dynamic> data = doc.data();
-      int age = data['age'];
-  }*/
-  }
   @override
   Widget build(BuildContext context) {
     String searchText = '';
@@ -149,11 +95,6 @@ void getDemoEmpData(){
                       setState((){
                         searchSkillTrueFalse = true;
                         searchTextSplitString = searchText.split(',');
-                        // print('values-=>$searchTextSplitString');
-                        // getEmpDetailsTemp(searchTextSplitString);
-                        // getDemoEmpData(searchTextSplitString);
-                        getDemoEmpData();
-                        // getEmpDetailsTemp(searchTextSplitString);
                       });
 
                     })),
@@ -232,34 +173,11 @@ class DepartmentDetails extends StatelessWidget {
         }
         if (snapshot.hasData){
           final data = snapshot.data!.docs;
-          // final List<EmployeeDetails> emp_details_list = [];
-
-        /*  List<String> skillsSearchList = <String>[];
-          for(var search in searchTextResult){
-            skillsSearchList.add(search);
-          }
-
-          for(int i=0; i<skillsSearchList.length; i++){
-            var datacount = 0;
-            for(int j=i; j<data.length; j++){
-              print('skilltestingtrial-=>${data[j]['Skill'].toString()}');
-              if(skillsSearchList[i].toString() == data[j]['Skill']){
-                datacount = datacount+1;
-                print('Found-=>${data[j]['Skill']}');
-              }
-
-            }
-            print('hello-=>$datacount');
-            print('testingDemo-=>${skillsSearchList.toString()}');
-            emp_details_list.add(new EmployeeDetails(Skill: skillsSearchList[i].toString(), count: datacount));
-          }*/
-
 
           List<String> skillName = <String>[];
           for(var searchSkill in data){
             skillName.add(searchSkill['Skill']);
           }
-
 
           List<EmployeeDetails> emp_details_list = [];
           for (var searchSkill in searchTextResult){
@@ -281,28 +199,6 @@ class DepartmentDetails extends StatelessWidget {
             // skillWidgetsList.add(skillWidgets);
           }
 
-          /*final List<ListTileSkillSearchResult> skillWidgetsList = [];
-          for (var searchSkill in searchTextResult){
-            for(var skills in data){
-              final skill = skills['Skill'];
-              if(searchSkill == skill){
-                count ++;
-              }
-            }
-            print('DataCount-=>$count');
-            final skillWidgets = ListTileSkillSearchResult(skill: searchSkill, count: count,);
-            skillWidgetsList.add(skillWidgets);
-          }
-          print('testvalues-=>$searchTextResult');*/
-          /*for (var skills in data){
-            final skill = skills['Skill'];
-
-            // final currentUser = loggedInUser.email;
-
-
-            final skillWidgets = ListTileSkillSearchResult(skill: skill,);
-            skillWidgetsList.add(skillWidgets);
-          }*/
           return Expanded(
             child: MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1(children: emp_details_list, circularChart: SfCircularPieChartAdminSkillSearch(),) : WebScreenAdminSearchScreen1(children: emp_details_list, circularChart: SfCircularPieChartAdminSkillSearch()),
           );
