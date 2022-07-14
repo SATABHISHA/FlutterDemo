@@ -258,6 +258,11 @@ class DepartmentDetails extends StatelessWidget {
             emp_details_list.add(new EmployeeDetails(Skill: searchSkill, count: countSkill));
             // count = 0;
             // skillWidgetsList.add(skillWidgets);
+
+            //----testing, starts
+
+            //----testing, ends
+
           }
 
           return Expanded(
