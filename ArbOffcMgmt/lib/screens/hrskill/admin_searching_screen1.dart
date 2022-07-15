@@ -1,5 +1,7 @@
 // import 'dart:ffi';
 
+// import 'dart:ffi';
+
 import 'package:arb_offc/data/admin_constants.dart';
 import 'package:arb_offc/data/employee_details.dart';
 import 'package:arb_offc/widgets/admin/mobile_screen_admin_search_screen1_skillset.dart';
@@ -208,13 +210,25 @@ class EmployeesTotalSkillSearch extends StatelessWidget {
             }*/
 
 
+            for (var skills in data) {
+              print('MultiSkillTest-=>${skills['MultiSkill'].toString()}');
+              for(var skill1 in List.of(skills['MultiSkill'])){
+                print('testoi-=>$skill1');
+              }
+            }
+
+
           for (var searchSkill in searchTextResult){
             var skill;
             for(var skills in data){
-              print('MultiSkillTest-=>${skills['MultiSkill']}');
-              for(var skill1 in skills['MultiSkill']){
+              // print('MultiSkillTest-=>${skills['MultiSkill'].toString()}');
+
+             /* for(var skill1 in skills['MultiSkill']){
                 print('testoi-=>$skill1');
-              }
+              }*/
+             /* for(int i=0; i<skills['MultiSkill']; i++){
+                print('testroi-=>${skills[i]['MultiSkill']}');
+              }*/
               /*for(int i=0; i<skills['MultiSkill'].length; i++){
                 print("MultiSkil-=>${skills[i]['MultiSkill'].toString()}");
               }*/
