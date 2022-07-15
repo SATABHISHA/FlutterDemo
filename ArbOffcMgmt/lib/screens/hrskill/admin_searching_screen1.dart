@@ -37,6 +37,17 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
     }
   }
 
+  void getEmpData() async{
+
+    QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection('EmpDetails').get();;
+
+    // Get data from docs and convert map to List
+    // final allData = querySnapshot.docs.map((doc) => doc.data()).toList();
+    //for a specific field
+    final allData = querySnapshot.docs.map((doc) => doc.get('MultiSkill')).toList();
+
+    print(allData);
+  }
    void  getMessageStream() {
      StreamBuilder(
          stream: _firestore.collection('EmpDetails').snapshots(),
@@ -63,6 +74,7 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
     }*/
 
      messagesStream();
+     getEmpData();
     // getMessageStream();
     // getEmpDetailsTemp();
     return Scaffold(
@@ -176,14 +188,45 @@ class EmployeesTotalSkillSearch extends StatelessWidget {
           var skillsEmployee = '';
           var count = 0;
           var loopCount = 0;
+
+        /*  for(int i=0; i<searchTextResult; i++){
+            for(int j=i; j<data.length; j++){
+              for(int z=0; z<data[j]['MultiSkill']; z++){
+
+              }
+            }
+          }*/
+
+            /*for (var searchSkill in searchTextResult) {
+              for (var skills in data) {
+                for(var skillSearch in skills['MultiSkill']){
+                  if(searchSkill.toString().trim().toLowerCase() == skillSearch.toString().toLowerCase()){
+                    print('skillArrayTesting-=>$skillSearch');
+                  }
+                }
+              }
+            }*/
+
+
           for (var searchSkill in searchTextResult){
             var skill;
             for(var skills in data){
-              // skill = skills['Skill'];
-              if(searchSkill.toString().trim().toLowerCase() == skills['Skill'].toString().toLowerCase()){
-                count = count+1;
-                skill = skills['Skill'];
+              print('MultiSkillTest-=>${skills['MultiSkill']}');
+              for(var skill1 in skills['MultiSkill']){
+                print('testoi-=>$skill1');
               }
+              /*for(int i=0; i<skills['MultiSkill'].length; i++){
+                print("MultiSkil-=>${skills[i]['MultiSkill'].toString()}");
+              }*/
+              // skill = skills['Skill'];
+              // for(var skillSearch in skills['MultiSkill']) {
+                if (searchSkill.toString().trim().toLowerCase() ==
+                    skills['Skill'].toString().toLowerCase()) {
+                  count = count + 1;
+                  // skill = skills['Skill'];
+                  skill = searchSkill;
+                }
+              // }
             }
             if(loopCount == 0){
               skillsEmployee = skill;
@@ -192,7 +235,21 @@ class EmployeesTotalSkillSearch extends StatelessWidget {
             }
             loopCount ++;
 
+           /* for(var skills in data){
+              // skill = skills['Skill'];
+              for(var skillSearch in skills['MultiSkill']){
+                if(searchSkill.toString().trim().toLowerCase() == skillSearch.toString().toLowerCase()){
+                  print('skillArrayTesting-=>$skillSearch');
+                }
+              }
+              *//*if(searchSkill.toString().trim().toLowerCase() == skills['Skill'].toString().toLowerCase()){
+                count = count+1;
+                skill = skills['Skill'];
+              }*//*
+            }*/
+
           }
+
           skillsEmployee.replaceFirst(RegExp(','),'',1);
 
           return MediaQuery.of(context).size.width < 760 ? MobileScreenAdminSearchScreen1SkillSet(skill: skillsEmployee, count: count) : WebScreenAdminSearchScreen1SkillSet(skill: skillsEmployee, count: count);
