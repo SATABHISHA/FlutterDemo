@@ -110,7 +110,6 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                     ),
                     Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){
                       setState((){
-
                         searchTextSplitString = searchText.split(',');
                         searchTextSplitString.toString().trim();
                         if(searchText.isEmpty){
