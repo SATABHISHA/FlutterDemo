@@ -110,10 +110,16 @@ class _SearchSkillByAdminState extends State<SearchSkillByAdmin> {
                     ),
                     Expanded(flex:3, child: RoundedButtonSearchSkillByAdminWidget(title: 'Search', onPressed: (){
                       setState((){
-                        searchSkillTrueFalse = true;
-                        searchSkillTotalTrueFalse = true;
+
                         searchTextSplitString = searchText.split(',');
                         searchTextSplitString.toString().trim();
+                        if(searchText.isEmpty){
+                          searchSkillTrueFalse = false;
+                          searchSkillTotalTrueFalse = false;
+                        }else{
+                          searchSkillTrueFalse = true;
+                          searchSkillTotalTrueFalse = true;
+                        }
                         _textSearchController.clear();
                       });
 
@@ -191,56 +197,21 @@ class EmployeesTotalSkillSearch extends StatelessWidget {
           var count = 0;
           var loopCount = 0;
 
-        /*  for(int i=0; i<searchTextResult; i++){
-            for(int j=i; j<data.length; j++){
-              for(int z=0; z<data[j]['MultiSkill']; z++){
-
-              }
-            }
-          }*/
-
-            /*for (var searchSkill in searchTextResult) {
-              for (var skills in data) {
-                for(var skillSearch in skills['MultiSkill']){
-                  if(searchSkill.toString().trim().toLowerCase() == skillSearch.toString().toLowerCase()){
-                    print('skillArrayTesting-=>$skillSearch');
-                  }
-                }
-              }
-            }*/
-
-
-            for (var skills in data) {
-              print('MultiSkillTest-=>${skills['MultiSkill'].toString()}');
-              for(var skill1 in List.of(skills['MultiSkill'])){
-                print('testoi-=>$skill1');
-              }
-            }
-
-
           for (var searchSkill in searchTextResult){
             var skill;
             for(var skills in data){
-              // print('MultiSkillTest-=>${skills['MultiSkill'].toString()}');
-
-             /* for(var skill1 in skills['MultiSkill']){
-                print('testoi-=>$skill1');
-              }*/
-             /* for(int i=0; i<skills['MultiSkill']; i++){
-                print('testroi-=>${skills[i]['MultiSkill']}');
-              }*/
-              /*for(int i=0; i<skills['MultiSkill'].length; i++){
-                print("MultiSkil-=>${skills[i]['MultiSkill'].toString()}");
-              }*/
               // skill = skills['Skill'];
-              // for(var skillSearch in skills['MultiSkill']) {
+              for(var skillSearch in skills['MultiSkill']) {
                 if (searchSkill.toString().trim().toLowerCase() ==
-                    skills['Skill'].toString().toLowerCase()) {
+                    skillSearch.toString().toLowerCase()) {
                   count = count + 1;
                   // skill = skills['Skill'];
                   skill = searchSkill;
+                }else{
+                  skill = searchSkill;
+                  // count = 0;
                 }
-              // }
+              }
             }
             if(loopCount == 0){
               skillsEmployee = skill;
@@ -283,9 +254,7 @@ class EmployeesTotalSkillSearch extends StatelessWidget {
 //---Firebase data fetching
 
 class DepartmentDetails extends StatelessWidget {
-  // const MessagesStream({Key? key}) : super(key: key);
-  // final bool searchBtnClickTrueFalse;
-  // DepartmentDetails(this.searchBtnClickTrueFalse);
+
   static List<String> skillNamesList = <String>[];
   static bool skillSearchTotalTrueFalse = false;
   var searchTextResult;
@@ -293,9 +262,6 @@ class DepartmentDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var datacount = 0;
-    var count = 0;
-    // searchTextResult = [];
     return StreamBuilder<QuerySnapshot>(
       builder: (context, snapshot){
         if(!snapshot.hasData){
@@ -315,18 +281,24 @@ class DepartmentDetails extends StatelessWidget {
           for (var searchSkill in searchTextResult){
             var countSkill = 0;
             print('SkillTestingAgain-=>$searchSkill');
-            
+            late String skill;
             for(var skills in data){
-              final skill = skills['Skill'];
-              print('skilltesting-=>$skill');
-              if(searchSkill.toString().trim().toLowerCase() == skills['Skill'].toString().toLowerCase()){
-                countSkill = countSkill+1;
-                print('Success ${skills['Skill']}');
+              /*final skill = skills['Skill'];
+              print('skilltesting-=>$skill');*/
+              for(var skillSearch in skills['MultiSkill']) {
+                if (searchSkill.toString().trim().toLowerCase() ==
+                    skillSearch.toString().toLowerCase()) {
+                  skill = skillSearch;
+                  countSkill = countSkill + 1;
+                  print('Success $skillSearch');
+                }else{
+                  skill = searchSkill;
+                }
               }
             }
             print('DataCount-=>$countSkill');
 
-            emp_details_list.add(new EmployeeDetails(Skill: searchSkill, count: countSkill));
+            emp_details_list.add(new EmployeeDetails(Skill: skill, count: countSkill));
             // count = 0;
             // skillWidgetsList.add(skillWidgets);
 
